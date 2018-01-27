@@ -2,30 +2,32 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-//比较复杂的移动炮台
-public class Enemy_Cannon : Enemy {
+namespace GOAT{
 
-	public GameObject prefabMissile;
+	//比较复杂的移动炮台
+	public class Enemy_Cannon : Enemy {
+
+		public GameObject prefabMissile;
 
 	private bool on_moving = true;
 	private bool has_launched = false;  //一辆Cannon只能停下来开火一次
 	private float launch_point_x;    //开火点
 	//随机先选取一个点作为开火点，然后开到那里以后就停下来，随机选取一个方向进行开火！
 
-	// Use this for initialization
-	void Start () {
-		//获取Animator组件并且设置left_to_right = true/false
-		if (this.direction == EnemyDirection.LEFT_TO_RIGHT){
-			this.GetComponent<Animator>().SetBool("left_to_right", true);
-		} else {
-			this.GetComponent<Animator>().SetBool("left_to_right", false);
-		}
+		// Use this for initialization
+		void Start () {
+			//获取Animator组件并且设置left_to_right = true/false
+			if (this.direction == EnemyDirection.LEFT_TO_RIGHT){
+				this.GetComponent<Animator>().SetBool("left_to_right", true);
+			} else {
+				this.GetComponent<Animator>().SetBool("left_to_right", false);
+			}
 
 		this.speed = 3.0f;
 
-		//0~18是x轴的范围
-		launch_point_x = 1.0f * Random.Range (4, 14);
-	}
+			//0~18是x轴的范围
+			launch_point_x = 1.0f * Random.Range (4, 14);
+		}
 
 	void Update() {
 		if (on_moving)
@@ -60,16 +62,16 @@ public class Enemy_Cannon : Enemy {
 		} 
 
 
-		//对tempPos进行更新操作
-		if (this.direction == EnemyDirection.LEFT_TO_RIGHT) {
-			tempPos.x += Time.deltaTime * this.speed;
-		} else {
-			tempPos.x -= Time.deltaTime * this.speed;
-		}
+			//对tempPos进行更新操作
+			if (this.direction == EnemyDirection.LEFT_TO_RIGHT) {
+				tempPos.x += Time.deltaTime * this.speed;
+			} else {
+				tempPos.x -= Time.deltaTime * this.speed;
+			}
 
-		transform.position = tempPos;
-		base.Move ();
-	}
+			transform.position = tempPos;
+			base.Move ();
+		}
 
 
 	//开火
@@ -80,14 +82,14 @@ public class Enemy_Cannon : Enemy {
 		float launch_distance = Random.Range (2.0f, 5.0f);
 		//float launch_distance = 5.0f;
 
-		//随机选取开火次数，有1次
-		int launch_times = Random.Range (1, 2);
+			//随机选取开火次数，有1次
+			int launch_times = Random.Range (1, 2);
 
-		//开火！
-		for (int i = 0; i < launch_times; i++) {
-			//随机选取一个方向进行开火
-			int direction = Random.Range (0, 4);
-			MissileDirection launch_direction = MissileDirection.UP;
+			//开火！
+			for (int i = 0; i < launch_times; i++) {
+				//随机选取一个方向进行开火
+				int direction = Random.Range (0, 4);
+				MissileDirection launch_direction = MissileDirection.UP;
 
 			//生成导弹
 			GameObject go = Instantiate (prefabMissile) as GameObject;
@@ -112,6 +114,6 @@ public class Enemy_Cannon : Enemy {
 		}
 	}
 
-
+	}
 
 }

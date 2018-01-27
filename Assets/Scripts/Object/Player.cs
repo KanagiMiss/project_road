@@ -28,7 +28,14 @@ namespace GOAT
 		public AudioClip jumpSFX;
 		public AudioClip victorySFX;
 
+		// particle
+		public GameObject deathExplosion;
+
 		// private variables below
+
+		private float speedDecay = 15f;
+		private float pullA = 4f;
+		private float dragA = 2f;
 
 		// store references to components on the gameObject
 		private Transform _transform;
@@ -37,8 +44,8 @@ namespace GOAT
 		private AudioSource _audio;
 
 		// hold player motion in this timestep
-		float _vx;
-		float _vy;
+		float _ax, _vx, last_vx, last_vx_time;
+		float _ay, _vy, last_vy, last_vy_time;
 
 		// player tracking
 		bool facingRight = true;
@@ -69,6 +76,8 @@ namespace GOAT
 
 			// determine the player's specified layer
 			_playerLayer = this.gameObject.layer;
+
+			_vx = _vy = 0;
 		}
 
 		void Start()
@@ -85,11 +94,28 @@ namespace GOAT
 
 			if (playerId == 1) {
 				// determine horizontal velocity change based on the horizontal input
-				_vx = Input.GetAxisRaw ("P1_Horizontal");
-				_vy = Input.GetAxisRaw ("P1_Vertical");
+				_ax = Input.GetAxisRaw ("P1_Horizontal");
+				_ay = Input.GetAxisRaw ("P1_Vertical");
 			} else if (playerId == 2) {
-				_vx = Input.GetAxisRaw ("P2_Horizontal");
-				_vy = Input.GetAxisRaw ("P2_Vertical");
+				_ax = Input.GetAxisRaw ("P2_Horizontal");
+				_ay = Input.GetAxisRaw ("P2_Vertical");
+			}
+
+			_vx = _vx + pullA * _ax * Time.deltaTime;
+			_vy = _vy + pullA * _ay * Time.deltaTime;
+
+			_vx = _vx + Mathf.Sign (_vx) * (-1) * dragA * Time.deltaTime;
+			_vy = _vy + Mathf.Sign (_vy) * (-1) * dragA * Time.deltaTime;
+
+			_vx = Mathf.Sign (_vx) * Mathf.Clamp (Mathf.Abs (_vx), 0f, 1f);
+			_vy = Mathf.Sign (_vy) * Mathf.Clamp (Mathf.Abs (_vy), 0f, 0.8f);
+
+			if (Mathf.Abs (_vx) < 0.05f) {
+				_vx = 0f;
+			}
+
+			if (Mathf.Abs (_vy) < 0.05f) {
+				_vy = 0f;
 			}
 
 			// Determine if running based on the horizontal movement
@@ -99,6 +125,25 @@ namespace GOAT
 			} else {
 				isRunning = false;
 			}
+
+			/*/ lerp
+			if (_vx == 0) {
+				float t = Mathf.Pow (Time.time - last_vx_time, 2);
+				float sign = Mathf.Sign (last_vx);
+				last_vx = sign * Mathf.Clamp (Mathf.Abs(last_vx) - t * t * speedDecay, 0f, 99f);
+			} else {
+				last_vx = _vx;
+				last_vx_time = Time.time;
+			}
+
+			if (_vy == 0) {
+				float t = Mathf.Pow (Time.time - last_vy_time, 2);
+				float sign = Mathf.Sign (last_vy);
+				last_vy = sign * Mathf.Clamp (Mathf.Abs(last_vy) - t * t * speedDecay, 0f, 99f);
+			} else {
+				last_vy = _vy;
+				last_vy_time = Time.time;
+			}*/
 
 			// set the running animation state
 			//_animator.SetBool("Running", isRunning);
@@ -189,10 +234,25 @@ namespace GOAT
 				playerHealth -= damage;
 
 				if (playerHealth <= 0) { // player is now dead, so start dying
-					PlaySound(deathSFX);
+					//PlaySound(deathSFX);
+					if (this.playerId == 1) {
+						EventManager.TriggerEvent ("Player1Death");
+					} else if (this.playerId == 2) {
+						EventManager.TriggerEvent ("Player2Death");
+					}
 					//StartCoroutine (KillPlayer ());
+					Destroy(this.gameObject);
+					// create particle system
+					GameObject obj = Instantiate(deathExplosion, this.transform.position, Quaternion.identity);
+					StartCoroutine(destroyDeathExplosion(obj));
 				}
 			}
+		}
+
+		IEnumerator destroyDeathExplosion(GameObject obj)
+		{
+			yield return new WaitForSeconds (0.5f);
+			Destroy (obj);
 		}
 	}
 

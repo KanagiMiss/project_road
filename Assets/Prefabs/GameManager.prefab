@@ -78,6 +78,14 @@ MonoBehaviour:
   - {fileID: 1144374235872490, guid: 92da5a2482b784795910d5b697e48926, type: 2}
   outerWallTiles:
   - {fileID: 1186199766366934, guid: 90fcf1c055a1a44b5aaabe4234484eb0, type: 2}
+  splitLine: {fileID: 1150839794226932, guid: 78296e4b30ac94a61b3de701a0f67dd0, type: 2}
+  visualGC: {fileID: 1383977967787838, guid: 03299bd36ddd14d97bed64f11228909e, type: 2}
+  blackScreen: {fileID: 1792393298396632, guid: 483082bb535624370af08deddbc138d7,
+    type: 2}
+  player1: {fileID: 1561998354725414, guid: 061563b8203d94a4da12cf60dd5b8e69, type: 2}
+  player2: {fileID: 1097982744237092, guid: ca519edc9157546fc90c84c2c8b0fa39, type: 2}
+  mailbox1: {fileID: 1541592280508616, guid: 9b846bbe09d76443f85f19945ec07fd4, type: 2}
+  mailbox2: {fileID: 1541592280508616, guid: 9b846bbe09d76443f85f19945ec07fd4, type: 2}
 --- !u!114 &114835519468339338
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -100,5 +108,15 @@ MonoBehaviour:
   UIScore: {fileID: 0}
   UIHighScore: {fileID: 0}
   UIReminingTime: {fileID: 0}
-  UIExtraLives: []
+  UIExtraLives:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   Players: []
