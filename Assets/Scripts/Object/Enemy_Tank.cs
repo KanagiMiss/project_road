@@ -6,11 +6,14 @@ namespace GOAT{
 
 	//坦克类型的敌人
 	public class Enemy_Tank : Enemy {
-		
 
 		// Use this for initialization
 		void Start () {
-			//this.speed = 1f;
+			if (this.direction == EnemyDirection.LEFT_TO_RIGHT) {
+				this.GetComponent<Animator> ().SetBool ("left_to_right", true);
+			} else {
+				this.GetComponent<Animator> ().SetBool ("left_to_right", false);
+			}
 		}
 
 		void Update() {
