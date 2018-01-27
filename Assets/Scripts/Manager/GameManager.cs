@@ -153,7 +153,7 @@ namespace GOAT
 
 
 			//get stored player prefs
-			refreshPlayerState();
+			//refreshPlayerState();
 
 			//get the UI ready for the game
 			refreshGUI();
@@ -224,18 +224,19 @@ namespace GOAT
 		}
 
 		//get stored player prefs
-		void refreshPlayerState(){
-			//lives update
-			//score update
-			//highScore update
-			if(score > highScore){
-				highScore = score;
-			}
-		}
+//		void refreshPlayerState(){
+//			//lives update
+//			//score update
+//			//highScore update
+//			if(score > highScore){
+//				highScore = score;
+//			}
+//		}
 
 		//get the UI ready for the game
 		void refreshGUI(){
 			if (UIScore != null && UIHighScore != null && UIReminingTime != null) {
+				
 				highScore = PlayerPrefManager.GetHighscore ();
 				UIScore.text = "Score: " + score.ToString ();
 				UIHighScore.text = "HighScore: " + highScore.ToString ();

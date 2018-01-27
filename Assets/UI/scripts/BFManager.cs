@@ -9,9 +9,12 @@ namespace GOAT{
 		public Text titleText;
 		public Text dialogueText;
 
+		public Animator animator;
+
 		private Queue<string> sentences;
 
 		//public Dialogue dialogue;
+	
 
 		// Use this for initialization
 		void Start () {
@@ -20,6 +23,8 @@ namespace GOAT{
 
 		public void StartDialogue (Dialogue dialogue)
 		{
+			animator.SetBool("IsOpen", true);
+			Debug.Log (animator.GetBool("IsOpen"));
 			titleText.text = dialogue.title;
 
 			sentences.Clear();
@@ -37,6 +42,7 @@ namespace GOAT{
 		{
 			if (sentences.Count == 0)
 			{
+				EndDialogue();
 				return;
 			}
 
@@ -53,6 +59,11 @@ namespace GOAT{
 				dialogueText.text += letter;
 				yield return null;
 			}
+		}
+
+		void EndDialogue()
+		{
+			animator.SetBool("IsOpen", false);
 		}
 
 	}
