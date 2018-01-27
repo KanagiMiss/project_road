@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+
 namespace GOAT
 {
 	using System.Collections.Generic;		//Allows us to use Lists. 
@@ -29,7 +30,7 @@ namespace GOAT
 		public int highScore = 0;
 		public int startLives = 10;
 		public int lives = 10;
-		public float reminingTime = 60;
+		public float reminingTime = 120;
 
 		public Text UIScore;
 		public Text UIHighScore;
@@ -148,16 +149,32 @@ namespace GOAT
 		//Update is called every frame.
 		void Update()
 		{
-			//Check that playersTurn or enemiesMoving or doingSetup are not currently true.
-			if(enemiesMoving || doingSetup)
-
-				//If any of these are true, return and do not start MoveEnemies.
-				return;
+//			//Check that playersTurn or enemiesMoving or doingSetup are not currently true.
+//			if(enemiesMoving || doingSetup)
+//
+//				//If any of these are true, return and do not start MoveEnemies.
+//				return;
 
 			//Start moving enemies.
 			//StartCoroutine (MoveEnemies ());
 			reminingTime -= Time.deltaTime;
-			UIReminingTime.text = reminingTime.ToString();
+			if (reminingTime <= 0)
+				return;
+			
+			int minute = (int)(reminingTime / 60);
+			int second = (int)(Mathf.Floor(reminingTime % 60));
+			int millionSecond = (int)((reminingTime * 100) % 100);
+
+			UIReminingTime.text = number2Text(minute)+ ":" + number2Text(second) + ":" +number2Text(millionSecond);
+
+		}
+
+		private string number2Text(int number){
+			if (number < 10) {
+				return "0" + number.ToString ();
+			} else {
+				return number.ToString ();
+			}
 		}
 
 		//Call this to add the passed in Enemy to the List of Enemy objects.
@@ -197,7 +214,7 @@ namespace GOAT
 			UIHighScore.text = "HighScore: " + highScore.ToString ();
 			UIReminingTime.text = reminingTime.ToString ();
 			for (int i = 0; i < UIExtraLives.Length; i++) {
-				if (i < (lives - 1)) {
+				if (i < (lives)) {
 					UIExtraLives[i].SetActive (true);
 				} else {
 					UIExtraLives[i].SetActive (false);
