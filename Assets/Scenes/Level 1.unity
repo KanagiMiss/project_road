@@ -222,6 +222,24 @@ Prefab:
       propertyPath: UIExtraLives.Array.data[9]
       value: 
       objectReference: {fileID: 303975292}
+    - target: {fileID: 114512205703441310, guid: a6a27244de3254a2cb4ff9b46cc555df,
+        type: 2}
+      propertyPath: blackScreen
+      value: 
+      objectReference: {fileID: 1792393298396632, guid: 483082bb535624370af08deddbc138d7,
+        type: 2}
+    - target: {fileID: 114512205703441310, guid: a6a27244de3254a2cb4ff9b46cc555df,
+        type: 2}
+      propertyPath: visualGC
+      value: 
+      objectReference: {fileID: 1383977967787838, guid: 03299bd36ddd14d97bed64f11228909e,
+        type: 2}
+    - target: {fileID: 114512205703441310, guid: a6a27244de3254a2cb4ff9b46cc555df,
+        type: 2}
+      propertyPath: splitLine
+      value: 
+      objectReference: {fileID: 1150839794226932, guid: 78296e4b30ac94a61b3de701a0f67dd0,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a6a27244de3254a2cb4ff9b46cc555df, type: 2}
   m_IsPrefabParent: 0
@@ -427,9 +445,9 @@ GameObject:
   - component: {fileID: 1120782975}
   - component: {fileID: 1120782974}
   - component: {fileID: 1120782973}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Player2
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -530,7 +548,7 @@ SpriteRenderer:
   m_Size: {x: 0.2, y: 0.2}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
 --- !u!4 &1120782977
 Transform:
@@ -933,9 +951,9 @@ GameObject:
   - component: {fileID: 1991046791}
   - component: {fileID: 1991046792}
   - component: {fileID: 1991046788}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Player1
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1001,7 +1019,7 @@ SpriteRenderer:
   m_Size: {x: 0.2, y: 0.2}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
 --- !u!4 &1991046790
 Transform:

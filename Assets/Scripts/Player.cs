@@ -55,7 +55,7 @@ namespace GOAT
 			_rigidbody = GetComponent<Rigidbody2D> ();
 			if (_rigidbody==null) // if Rigidbody is missing
 				Debug.LogError("Rigidbody2D component missing from this gameobject");
-
+			/*
 			_animator = GetComponent<Animator>();
 			if (_animator==null) // if Animator is missing
 				;//Debug.LogError("Animator component missing from this gameobject");
@@ -65,7 +65,7 @@ namespace GOAT
 				Debug.LogWarning("AudioSource component missing from this gameobject. Adding one.");
 				// let's just add the AudioSource component dynamically
 				_audio = gameObject.AddComponent<AudioSource>();
-			}
+			}*/
 
 			// determine the player's specified layer
 			_playerLayer = this.gameObject.layer;
