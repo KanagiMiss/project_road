@@ -24,6 +24,18 @@ namespace GOAT
 		private bool doingSetup = true;							//Boolean to check if we're setting up board, prevent Player from moving during setup.
 
 
+		//code added for UI begin 
+		public int score = 0;
+		public int highScore = 0;
+		public int startLives = 3;
+		public int lives = 3;
+		public int reminingTime = 60;
+
+		public Text UIScore;
+		public Text UIHighScore;
+		public GameObject[] UIExtraLives;
+		//code addeb for UI end
+
 
 		//Awake is always called before any Start functions
 		void Awake()
