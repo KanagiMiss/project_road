@@ -74,27 +74,28 @@ public class Enemy_Cannon : Enemy {
 		//开火！
 		for (int i = 0; i < launch_times; i++) {
 			//随机选取一个方向进行开火
-			int launch_direction = Random.Range (0, 4);
+			int direction = Random.Range (0, 4);
+			MissileDirection launch_direction = MissileDirection.UP;
 
 			//生成导弹
 			GameObject go = Instantiate (prefabMissile) as GameObject;
-			//投弹
-			Vector2 go_destination = transform.position;
-			Vector2 go_temp = go_destination;
-			switch (launch_direction) {
+			switch (direction) {
 			//旋转战车车身
 			case 0:   //上
+				launch_direction = MissileDirection.UP;
 				break;
 			case 1:   //下
+				launch_direction = MissileDirection.DOWN;
 				break;
 			case 2:   //左
+				launch_direction = MissileDirection.LEFT;
 				break;
 			case 3:   //右
+				launch_direction = MissileDirection.RIGHT;
 				break;
 			}
-			go_destination = go_temp;
 			//真的发射！
-			go.GetComponent<Missile> ().Throw (transform.position, MissileDirection.RIGHT, launch_distance);
+			go.GetComponent<Missile> ().Throw (transform.position, launch_direction, launch_distance);
 		}
 	}
 
