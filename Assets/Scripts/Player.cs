@@ -14,6 +14,9 @@ namespace GOAT
 		// player health
 		public int playerHealth = 1;
 
+		// which player
+		public int playerId = 1;
+
 		// player can move?
 		// we want this public so other scripts can access it but we don't want to show in editor as it might confuse designer
 		[HideInInspector]
@@ -80,9 +83,14 @@ namespace GOAT
 			if (!playerCanMove || (Time.timeScale == 0f))
 				return;
 
-			// determine horizontal velocity change based on the horizontal input
-			_vx = Input.GetAxisRaw ("Horizontal");
-			_vy = Input.GetAxisRaw ("Vertical");
+			if (playerId == 1) {
+				// determine horizontal velocity change based on the horizontal input
+				_vx = Input.GetAxisRaw ("P1_Horizontal");
+				_vy = Input.GetAxisRaw ("P1_Vertical");
+			} else if (playerId == 2) {
+				_vx = Input.GetAxisRaw ("P2_Horizontal");
+				_vy = Input.GetAxisRaw ("P2_Vertical");
+			}
 
 			// Determine if running based on the horizontal movement
 			if (_vx != 0 || _vy != 0) 
