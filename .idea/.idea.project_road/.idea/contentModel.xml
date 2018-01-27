@@ -14,15 +14,18 @@
         </e>
         <e p="Scripts" t="Include">
           <e p="BoardManager.cs" t="Include" />
+          <e p="Border.cs" t="Include" />
           <e p="Enemy.cs" t="Include" />
           <e p="GameManager.cs" t="Include" />
           <e p="GGJ" t="Include">
             <e p="Enemy_Sapper.cs" t="Include" />
             <e p="Landmine.cs" t="Include" />
           </e>
+          <e p="GradientBlack.cs" t="Include" />
           <e p="Loader.cs" t="Include" />
           <e p="LSM" t="Include">
             <e p="Enemy.cs" t="Include" />
+            <e p="Enemy_Cannon.cs" t="Include" />
             <e p="Enemy_Plane_1.cs" t="Include" />
             <e p="Enemy_Plane_2.cs" t="Include" />
             <e p="Enemy_soldier.cs" t="Include" />

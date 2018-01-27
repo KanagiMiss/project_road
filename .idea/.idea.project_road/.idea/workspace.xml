@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b3f3d058-2372-40ff-ac4a-6c0e46d1c614" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GGJ/Enemy_Sapper.cs" afterPath="$PROJECT_DIR$/Assets/Scripts/GGJ/Enemy_Sapper.cs" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.project_road/.idea/contentModel.xml" afterPath="$PROJECT_DIR$/.idea/.idea.project_road/.idea/contentModel.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.project_road/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/.idea.project_road/.idea/workspace.xml" />
     </list>
+    <ignored path=".idea/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -19,27 +21,26 @@
             <entry file="file://$PROJECT_DIR$/Assets/Scripts/LSM/Enemy.cs">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="697">
-                  <caret line="53" column="24" lean-forward="false" selection-start-line="53" selection-start-column="24" selection-end-line="53" selection-end-column="24" />
+                  <caret line="54" column="24" lean-forward="false" selection-start-line="54" selection-start-column="24" selection-end-line="54" selection-end-column="24" />
                   <folding>
-                    <marker date="1517042025000" expanded="false" signature="6:78" ph="..." />
-                    <marker date="1517042025000" expanded="true" signature="107:148" ph="{...}" />
-                    <marker date="1517042025000" expanded="true" signature="192:1906" ph="{...}" />
-                    <marker date="1517042025000" expanded="true" signature="475:707" ph="{...}" />
-                    <marker date="1517042025000" expanded="true" signature="517:567" ph="{...}" />
-                    <marker date="1517042025000" expanded="true" signature="626:704" ph="/* 0f后开始，没2f调用一次CheckOffScreen ... */" />
-                    <marker date="1517042025000" expanded="true" signature="756:761" ph="{...}" />
-                    <marker date="1517042025000" expanded="true" signature="815:819" ph="{...}" />
-                    <marker date="1517042025000" expanded="true" signature="909:949" ph="{...}" />
-                    <marker date="1517042025000" expanded="true" signature="1004:1037" ph="{...}" />
-                    <marker date="1517042025000" expanded="true" signature="1059:1157" ph="{...}" />
-                    <marker date="1517042025000" expanded="true" signature="1066:1107" ph="{...}" />
-                    <marker date="1517042025000" expanded="true" signature="1113:1154" ph="{...}" />
-                    <marker date="1517042025000" expanded="true" signature="1202:1670" ph="{...}" />
-                    <marker date="1517042025000" expanded="true" signature="1239:1408" ph="{...}" />
-                    <marker date="1517042025000" expanded="true" signature="1603:1667" ph="{...}" />
-                    <marker date="1517042025000" expanded="true" signature="1728:1904" ph="{...}" />
-                    <marker date="1517042025000" expanded="true" signature="1789:1901" ph="{...}" />
-                    <marker date="1517042025000" expanded="true" signature="1820:1887" ph="/* Hero跪了 ... */" />
+                    <marker date="1517057567000" expanded="false" signature="6:78" ph="..." />
+                    <marker date="1517057567000" expanded="true" signature="107:148" ph="{...}" />
+                    <marker date="1517057567000" expanded="true" signature="192:1909" ph="{...}" />
+                    <marker date="1517057567000" expanded="true" signature="475:624" ph="{...}" />
+                    <marker date="1517057567000" expanded="true" signature="517:567" ph="{...}" />
+                    <marker date="1517057567000" expanded="true" signature="761:764" ph="{...}" />
+                    <marker date="1517057567000" expanded="true" signature="818:822" ph="{...}" />
+                    <marker date="1517057567000" expanded="true" signature="912:952" ph="{...}" />
+                    <marker date="1517057567000" expanded="true" signature="1007:1040" ph="{...}" />
+                    <marker date="1517057567000" expanded="true" signature="1062:1160" ph="{...}" />
+                    <marker date="1517057567000" expanded="true" signature="1069:1110" ph="{...}" />
+                    <marker date="1517057567000" expanded="true" signature="1116:1157" ph="{...}" />
+                    <marker date="1517057567000" expanded="true" signature="1205:1673" ph="{...}" />
+                    <marker date="1517057567000" expanded="true" signature="1242:1411" ph="{...}" />
+                    <marker date="1517057567000" expanded="true" signature="1606:1670" ph="{...}" />
+                    <marker date="1517057567000" expanded="true" signature="1731:1907" ph="{...}" />
+                    <marker date="1517057567000" expanded="true" signature="1792:1904" ph="{...}" />
+                    <marker date="1517057567000" expanded="true" signature="1823:1890" ph="/* Hero跪了 ... */" />
                   </folding>
                 </state>
               </provider>
@@ -75,18 +76,19 @@
           <file leaf-file-name="Enemy_Plane_1.cs" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/Assets/Scripts/LSM/Enemy_Plane_1.cs">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-91">
+                <state relative-caret-position="-46">
                   <caret line="6" column="28" lean-forward="false" selection-start-line="6" selection-start-column="28" selection-end-line="6" selection-end-column="28" />
                   <folding>
-                    <marker date="1517042025000" expanded="true" signature="6:78" ph="..." />
-                    <marker date="1517042025000" expanded="true" signature="125:1098" ph="{...}" />
-                    <marker date="1517042025000" expanded="true" signature="254:490" ph="{...}" />
-                    <marker date="1517042025000" expanded="true" signature="318:436" ph="{...}" />
-                    <marker date="1517042025000" expanded="true" signature="507:522" ph="{...}" />
-                    <marker date="1517042025000" expanded="true" signature="526:584" ph="/* Plane Move: ... */" />
-                    <marker date="1517042025000" expanded="true" signature="613:921" ph="{...}" />
-                    <marker date="1517042025000" expanded="true" signature="763:813" ph="{...}" />
-                    <marker date="1517042025000" expanded="true" signature="957:1096" ph="{...}" />
+                    <marker date="1517057567000" expanded="true" signature="6:78" ph="..." />
+                    <marker date="1517057567000" expanded="true" signature="125:1163" ph="{...}" />
+                    <marker date="1517057567000" expanded="true" signature="254:490" ph="{...}" />
+                    <marker date="1517057567000" expanded="true" signature="318:436" ph="{...}" />
+                    <marker date="1517057567000" expanded="true" signature="507:522" ph="{...}" />
+                    <marker date="1517057567000" expanded="true" signature="526:584" ph="/* Plane Move: ... */" />
+                    <marker date="1517057567000" expanded="true" signature="613:921" ph="{...}" />
+                    <marker date="1517057567000" expanded="true" signature="763:813" ph="{...}" />
+                    <marker date="1517057567000" expanded="true" signature="957:1161" ph="{...}" />
+                    <marker date="1517057567000" expanded="true" signature="1031:1095" ph="/* 投弹 ... */" />
                   </folding>
                 </state>
               </provider>
@@ -95,22 +97,18 @@
           <file leaf-file-name="Missile.cs" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/Assets/Scripts/LSM/Missile.cs">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="39">
-                  <caret line="48" column="21" lean-forward="false" selection-start-line="48" selection-start-column="21" selection-end-line="48" selection-end-column="21" />
+                <state relative-caret-position="834">
+                  <caret line="101" column="0" lean-forward="false" selection-start-line="101" selection-start-column="0" selection-end-line="101" selection-end-column="0" />
                   <folding>
-                    <marker date="1517042025000" expanded="true" signature="6:78" ph="..." />
-                    <marker date="1517042025000" expanded="true" signature="105:133" ph="{...}" />
-                    <marker date="1517042025000" expanded="true" signature="200:1717" ph="{...}" />
-                    <marker date="1517042025000" expanded="true" signature="473:480" ph="{...}" />
-                    <marker date="1517042025000" expanded="true" signature="529:630" ph="{...}" />
-                    <marker date="1517042025000" expanded="true" signature="685:692" ph="{...}" />
-                    <marker date="1517042025000" expanded="true" signature="754:870" ph="{...}" />
-                    <marker date="1517042025000" expanded="true" signature="898:1017" ph="{...}" />
-                    <marker date="1517042025000" expanded="true" signature="1059:1188" ph="{...}" />
-                    <marker date="1517042025000" expanded="true" signature="1200:1452" ph="/* void OnCollisionEnter2D(Collision2D coll){ ... */" />
-                    <marker date="1517042025000" expanded="true" signature="1508:1714" ph="{...}" />
-                    <marker date="1517042025000" expanded="true" signature="1627:1711" ph="{...}" />
-                    <marker date="1517042025000" expanded="true" signature="1632:1707" ph="/* 如果碰撞到的是玩家，那么干吧 ... */" />
+                    <marker date="1517057567000" expanded="true" signature="6:78" ph="..." />
+                    <marker date="1517057567000" expanded="true" signature="105:133" ph="{...}" />
+                    <marker date="1517057567000" expanded="true" signature="2164:2282" ph="{...}" />
+                    <marker date="1517057567000" expanded="true" signature="2164:2982" ph="{...}" />
+                    <marker date="1517057567000" expanded="true" signature="2324:2453" ph="{...}" />
+                    <marker date="1517057567000" expanded="true" signature="2465:2717" ph="/* void OnCollisionEnter2D(Collision2D coll){ ... */" />
+                    <marker date="1517057567000" expanded="true" signature="2773:2979" ph="{...}" />
+                    <marker date="1517057567000" expanded="true" signature="2892:2976" ph="{...}" />
+                    <marker date="1517057567000" expanded="true" signature="2897:2972" ph="/* 如果碰撞到的是玩家，那么干吧 ... */" />
                   </folding>
                 </state>
               </provider>
@@ -123,7 +121,7 @@
           <file leaf-file-name="Enemy_Sapper.cs" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/Assets/Scripts/GGJ/Enemy_Sapper.cs">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="373">
+                <state relative-caret-position="375">
                   <caret line="25" column="1" lean-forward="false" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="1" />
                   <folding>
                     <marker date="1517057278000" expanded="true" signature="53:402" ph="{...}" />
@@ -181,6 +179,10 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/LSM/Enemy_Plane_1.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GGJ/Landmine.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GGJ/Enemy_Sapper.cs" />
+        <option value="$PROJECT_DIR$/Assets/Animations.meta" />
+        <option value="$PROJECT_DIR$/Assets/Scenes/Level 1.unity.meta" />
+        <option value="$PROJECT_DIR$/ProjectSettings/TagManager.asset" />
+        <option value="$PROJECT_DIR$/Assets/Scenes/test.unity.meta" />
       </list>
     </option>
   </component>
@@ -290,7 +292,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1517042720380</updated>
-      <workItem from="1517042722066" duration="3162000" />
+      <workItem from="1517042722066" duration="4009000" />
     </task>
     <task id="LOCAL-00001" summary="。。">
       <created>1517056622210</created>
@@ -299,11 +301,32 @@
       <option name="project" value="LOCAL" />
       <updated>1517056622211</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="image 素材">
+      <created>1517057293630</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1517057293630</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Merge branch 'master' of https://gitee.com/misskanagi/project_road&#10;&#10;# Conflicts:&#10;#&#9;Assets/Animations.meta&#10;#&#9;Assets/Scenes/Level 1.unity.meta&#10;#&#9;Assets/Scenes/test.unity.meta&#10;#&#9;ProjectSettings/TagManager.asset">
+      <created>1517057998504</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1517057998505</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Merge branch 'master' of https://gitee.com/misskanagi/project_road&#10;&#10;# Conflicts:&#10;#&#9;Assets/Animations.meta&#10;#&#9;Assets/Scenes/Level 1.unity.meta&#10;#&#9;Assets/Scenes/test.unity.meta&#10;#&#9;ProjectSettings/TagManager.asset">
+      <created>1517058262571</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1517058262572</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3162000" />
+    <option name="totallyTimeSpent" value="4009000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -321,11 +344,11 @@
       <window_info id="Errors In Solution" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Unit Tests" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3287483" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35488307" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287483" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="NuGet" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.10662359" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.226979" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -343,12 +366,40 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="。。" />
-    <option name="LAST_COMMIT_MESSAGE" value="。。" />
+    <MESSAGE value="image 素材" />
+    <MESSAGE value="Merge branch 'master' of https://gitee.com/misskanagi/project_road&#10;&#10;# Conflicts:&#10;#&#9;Assets/Animations.meta&#10;#&#9;Assets/Scenes/Level 1.unity.meta&#10;#&#9;Assets/Scenes/test.unity.meta&#10;#&#9;ProjectSettings/TagManager.asset" />
+    <option name="LAST_COMMIT_MESSAGE" value="Merge branch 'master' of https://gitee.com/misskanagi/project_road&#10;&#10;# Conflicts:&#10;#&#9;Assets/Animations.meta&#10;#&#9;Assets/Scenes/Level 1.unity.meta&#10;#&#9;Assets/Scenes/test.unity.meta&#10;#&#9;ProjectSettings/TagManager.asset" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -397,27 +448,63 @@
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/LSM/Enemy.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="697">
-          <caret line="53" column="24" lean-forward="false" selection-start-line="53" selection-start-column="24" selection-end-line="53" selection-end-column="24" />
+          <caret line="54" column="24" lean-forward="false" selection-start-line="54" selection-start-column="24" selection-end-line="54" selection-end-column="24" />
           <folding>
-            <marker date="1517042025000" expanded="false" signature="6:78" ph="..." />
-            <marker date="1517042025000" expanded="true" signature="107:148" ph="{...}" />
-            <marker date="1517042025000" expanded="true" signature="192:1906" ph="{...}" />
-            <marker date="1517042025000" expanded="true" signature="475:707" ph="{...}" />
-            <marker date="1517042025000" expanded="true" signature="517:567" ph="{...}" />
-            <marker date="1517042025000" expanded="true" signature="626:704" ph="/* 0f后开始，没2f调用一次CheckOffScreen ... */" />
-            <marker date="1517042025000" expanded="true" signature="756:761" ph="{...}" />
-            <marker date="1517042025000" expanded="true" signature="815:819" ph="{...}" />
-            <marker date="1517042025000" expanded="true" signature="909:949" ph="{...}" />
-            <marker date="1517042025000" expanded="true" signature="1004:1037" ph="{...}" />
-            <marker date="1517042025000" expanded="true" signature="1059:1157" ph="{...}" />
-            <marker date="1517042025000" expanded="true" signature="1066:1107" ph="{...}" />
-            <marker date="1517042025000" expanded="true" signature="1113:1154" ph="{...}" />
-            <marker date="1517042025000" expanded="true" signature="1202:1670" ph="{...}" />
-            <marker date="1517042025000" expanded="true" signature="1239:1408" ph="{...}" />
-            <marker date="1517042025000" expanded="true" signature="1603:1667" ph="{...}" />
-            <marker date="1517042025000" expanded="true" signature="1728:1904" ph="{...}" />
-            <marker date="1517042025000" expanded="true" signature="1789:1901" ph="{...}" />
-            <marker date="1517042025000" expanded="true" signature="1820:1887" ph="/* Hero跪了 ... */" />
+            <marker date="1517057567000" expanded="false" signature="6:78" ph="..." />
+            <marker date="1517057567000" expanded="true" signature="107:148" ph="{...}" />
+            <marker date="1517057567000" expanded="true" signature="192:1909" ph="{...}" />
+            <marker date="1517057567000" expanded="true" signature="475:624" ph="{...}" />
+            <marker date="1517057567000" expanded="true" signature="517:567" ph="{...}" />
+            <marker date="1517057567000" expanded="true" signature="761:764" ph="{...}" />
+            <marker date="1517057567000" expanded="true" signature="818:822" ph="{...}" />
+            <marker date="1517057567000" expanded="true" signature="912:952" ph="{...}" />
+            <marker date="1517057567000" expanded="true" signature="1007:1040" ph="{...}" />
+            <marker date="1517057567000" expanded="true" signature="1062:1160" ph="{...}" />
+            <marker date="1517057567000" expanded="true" signature="1069:1110" ph="{...}" />
+            <marker date="1517057567000" expanded="true" signature="1116:1157" ph="{...}" />
+            <marker date="1517057567000" expanded="true" signature="1205:1673" ph="{...}" />
+            <marker date="1517057567000" expanded="true" signature="1242:1411" ph="{...}" />
+            <marker date="1517057567000" expanded="true" signature="1606:1670" ph="{...}" />
+            <marker date="1517057567000" expanded="true" signature="1731:1907" ph="{...}" />
+            <marker date="1517057567000" expanded="true" signature="1792:1904" ph="{...}" />
+            <marker date="1517057567000" expanded="true" signature="1823:1890" ph="/* Hero跪了 ... */" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/LSM/Missile.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="834">
+          <caret line="101" column="0" lean-forward="false" selection-start-line="101" selection-start-column="0" selection-end-line="101" selection-end-column="0" />
+          <folding>
+            <marker date="1517057567000" expanded="true" signature="6:78" ph="..." />
+            <marker date="1517057567000" expanded="true" signature="105:133" ph="{...}" />
+            <marker date="1517057567000" expanded="true" signature="2164:2282" ph="{...}" />
+            <marker date="1517057567000" expanded="true" signature="2164:2982" ph="{...}" />
+            <marker date="1517057567000" expanded="true" signature="2324:2453" ph="{...}" />
+            <marker date="1517057567000" expanded="true" signature="2465:2717" ph="/* void OnCollisionEnter2D(Collision2D coll){ ... */" />
+            <marker date="1517057567000" expanded="true" signature="2773:2979" ph="{...}" />
+            <marker date="1517057567000" expanded="true" signature="2892:2976" ph="{...}" />
+            <marker date="1517057567000" expanded="true" signature="2897:2972" ph="/* 如果碰撞到的是玩家，那么干吧 ... */" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/LSM/Enemy_Plane_1.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-46">
+          <caret line="6" column="28" lean-forward="false" selection-start-line="6" selection-start-column="28" selection-end-line="6" selection-end-column="28" />
+          <folding>
+            <marker date="1517057567000" expanded="true" signature="6:78" ph="..." />
+            <marker date="1517057567000" expanded="true" signature="125:1163" ph="{...}" />
+            <marker date="1517057567000" expanded="true" signature="254:490" ph="{...}" />
+            <marker date="1517057567000" expanded="true" signature="318:436" ph="{...}" />
+            <marker date="1517057567000" expanded="true" signature="507:522" ph="{...}" />
+            <marker date="1517057567000" expanded="true" signature="526:584" ph="/* Plane Move: ... */" />
+            <marker date="1517057567000" expanded="true" signature="613:921" ph="{...}" />
+            <marker date="1517057567000" expanded="true" signature="763:813" ph="{...}" />
+            <marker date="1517057567000" expanded="true" signature="957:1161" ph="{...}" />
+            <marker date="1517057567000" expanded="true" signature="1031:1095" ph="/* 投弹 ... */" />
           </folding>
         </state>
       </provider>
@@ -443,49 +530,41 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/LSM/Missile.cs">
+    <entry file="file://$PROJECT_DIR$/Assets/Animations.meta">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="39">
-          <caret line="48" column="21" lean-forward="false" selection-start-line="48" selection-start-column="21" selection-end-line="48" selection-end-column="21" />
-          <folding>
-            <marker date="1517042025000" expanded="true" signature="6:78" ph="..." />
-            <marker date="1517042025000" expanded="true" signature="105:133" ph="{...}" />
-            <marker date="1517042025000" expanded="true" signature="200:1717" ph="{...}" />
-            <marker date="1517042025000" expanded="true" signature="473:480" ph="{...}" />
-            <marker date="1517042025000" expanded="true" signature="529:630" ph="{...}" />
-            <marker date="1517042025000" expanded="true" signature="685:692" ph="{...}" />
-            <marker date="1517042025000" expanded="true" signature="754:870" ph="{...}" />
-            <marker date="1517042025000" expanded="true" signature="898:1017" ph="{...}" />
-            <marker date="1517042025000" expanded="true" signature="1059:1188" ph="{...}" />
-            <marker date="1517042025000" expanded="true" signature="1200:1452" ph="/* void OnCollisionEnter2D(Collision2D coll){ ... */" />
-            <marker date="1517042025000" expanded="true" signature="1508:1714" ph="{...}" />
-            <marker date="1517042025000" expanded="true" signature="1627:1711" ph="{...}" />
-            <marker date="1517042025000" expanded="true" signature="1632:1707" ph="/* 如果碰撞到的是玩家，那么干吧 ... */" />
-          </folding>
+        <state relative-caret-position="60">
+          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/LSM/Enemy_Plane_1.cs">
+    <entry file="file://$PROJECT_DIR$/Assets/Scenes/test.unity.meta">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-91">
-          <caret line="6" column="28" lean-forward="false" selection-start-line="6" selection-start-column="28" selection-end-line="6" selection-end-column="28" />
-          <folding>
-            <marker date="1517042025000" expanded="true" signature="6:78" ph="..." />
-            <marker date="1517042025000" expanded="true" signature="125:1098" ph="{...}" />
-            <marker date="1517042025000" expanded="true" signature="254:490" ph="{...}" />
-            <marker date="1517042025000" expanded="true" signature="318:436" ph="{...}" />
-            <marker date="1517042025000" expanded="true" signature="507:522" ph="{...}" />
-            <marker date="1517042025000" expanded="true" signature="526:584" ph="/* Plane Move: ... */" />
-            <marker date="1517042025000" expanded="true" signature="613:921" ph="{...}" />
-            <marker date="1517042025000" expanded="true" signature="763:813" ph="{...}" />
-            <marker date="1517042025000" expanded="true" signature="957:1096" ph="{...}" />
-          </folding>
+        <state relative-caret-position="45">
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scenes/Level 1.unity.meta">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ProjectSettings/TagManager.asset">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="59" column="0" lean-forward="false" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/GGJ/Enemy_Sapper.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="373">
+        <state relative-caret-position="375">
           <caret line="25" column="1" lean-forward="false" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="1" />
           <folding>
             <marker date="1517057278000" expanded="true" signature="53:402" ph="{...}" />
