@@ -48,6 +48,7 @@ public class Enemy_Plane_1 : Enemy {
 		//生成导弹
 		GameObject go = Instantiate (prefabMissile) as GameObject;
 		//投弹
-		go.GetComponent<Missile> ().Throw (transform.position);
+		//go.GetComponent<Missile> ().Throw (transform.position);
+		go.GetComponent<Missile>().Throw(transform.position, 0, 0f);
 	}
 }
