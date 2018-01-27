@@ -10,6 +10,12 @@ public class Enemy_Plane_1 : Enemy {
 
 	// Use this for initialization
 	void Start () {
+		//调整飞机头的朝向
+		if (direction == EnemyDirection.LEFT_TO_RIGHT) {
+			Vector3 old_scale = this.transform.localScale;
+			old_scale.x = -1;
+			this.transform.localScale = old_scale;
+		}
 		InvokeRepeating ("ThrowMissile", 0f, throwRate);
 	}
 
