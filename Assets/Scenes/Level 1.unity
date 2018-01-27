@@ -238,7 +238,41 @@ Prefab:
     - target: {fileID: 114835519468339338, guid: a6a27244de3254a2cb4ff9b46cc555df,
         type: 2}
       propertyPath: reminingTime
-      value: 30
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 114512205703441310, guid: a6a27244de3254a2cb4ff9b46cc555df,
+        type: 2}
+      propertyPath: player1
+      value: 
+      objectReference: {fileID: 1561998354725414, guid: 061563b8203d94a4da12cf60dd5b8e69,
+        type: 2}
+    - target: {fileID: 114512205703441310, guid: a6a27244de3254a2cb4ff9b46cc555df,
+        type: 2}
+      propertyPath: player2
+      value: 
+      objectReference: {fileID: 1097982744237092, guid: ca519edc9157546fc90c84c2c8b0fa39,
+        type: 2}
+    - target: {fileID: 114512205703441310, guid: a6a27244de3254a2cb4ff9b46cc555df,
+        type: 2}
+      propertyPath: mailbox1
+      value: 
+      objectReference: {fileID: 1541592280508616, guid: 9b846bbe09d76443f85f19945ec07fd4,
+        type: 2}
+    - target: {fileID: 114512205703441310, guid: a6a27244de3254a2cb4ff9b46cc555df,
+        type: 2}
+      propertyPath: mailbox2
+      value: 
+      objectReference: {fileID: 1541592280508616, guid: 9b846bbe09d76443f85f19945ec07fd4,
+        type: 2}
+    - target: {fileID: 114835519468339338, guid: a6a27244de3254a2cb4ff9b46cc555df,
+        type: 2}
+      propertyPath: lives
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114835519468339338, guid: a6a27244de3254a2cb4ff9b46cc555df,
+        type: 2}
+      propertyPath: startLives
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a6a27244de3254a2cb4ff9b46cc555df, type: 2}
