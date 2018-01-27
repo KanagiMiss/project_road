@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b3f3d058-2372-40ff-ac4a-6c0e46d1c614" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.project_road/.idea/contentModel.xml" afterPath="$PROJECT_DIR$/.idea/.idea.project_road/.idea/contentModel.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.project_road/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/.idea.project_road/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/wuhao/Enemy_Soldier_Shoot.prefab.meta" afterPath="$PROJECT_DIR$/Assets/Prefabs/wuhao/Enemy_Soldier_Shoot.prefab.meta" />
     </list>
     <ignored path=".idea/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -52,22 +52,22 @@
                 <state relative-caret-position="-110">
                   <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
                   <folding>
-                    <marker date="1517042025000" expanded="false" signature="6:276" ph="..." />
-                    <marker date="1517042025000" expanded="true" signature="360:5117" ph="{...}" />
-                    <marker date="1517042025000" expanded="true" signature="1209:1507" ph="{...}" />
-                    <marker date="1517042025000" expanded="true" signature="1510:1629" ph="/* loop through all the LevelButtons and set them to interactable ... */" />
-                    <marker date="1517042025000" expanded="true" signature="1653:3008" ph="{...}" />
-                    <marker date="1517042025000" expanded="true" signature="1842:3005" ph="{...}" />
-                    <marker date="1517042025000" expanded="true" signature="2896:2945" ph="{...}" />
-                    <marker date="1517042025000" expanded="true" signature="3142:3921" ph="{...}" />
-                    <marker date="1517042025000" expanded="true" signature="3178:3918" ph="{...}" />
-                    <marker date="1517042025000" expanded="true" signature="3383:3527" ph="/* platforms that should not have quit button ... */" />
-                    <marker date="1517042025000" expanded="true" signature="3640:3723" ph="/* case RuntimePlatform.OSXWebPlayer: ... */" />
-                    <marker date="1517042025000" expanded="true" signature="3924:4041" ph="/* Public functions below that are available via the UI Event Triggers, such as on Buttons. ... */" />
-                    <marker date="1517042025000" expanded="true" signature="4076:4785" ph="{...}" />
-                    <marker date="1517042025000" expanded="true" signature="4293:4782" ph="{...}" />
-                    <marker date="1517042025000" expanded="true" signature="4864:5043" ph="{...}" />
-                    <marker date="1517042025000" expanded="true" signature="5086:5115" ph="{...}" />
+                    <marker date="1517058293000" expanded="false" signature="6:276" ph="..." />
+                    <marker date="1517058293000" expanded="true" signature="360:5118" ph="{...}" />
+                    <marker date="1517058293000" expanded="true" signature="1210:1508" ph="{...}" />
+                    <marker date="1517058293000" expanded="true" signature="1511:1630" ph="/* loop through all the LevelButtons and set them to interactable ... */" />
+                    <marker date="1517058293000" expanded="true" signature="1654:3009" ph="{...}" />
+                    <marker date="1517058293000" expanded="true" signature="1843:3006" ph="{...}" />
+                    <marker date="1517058293000" expanded="true" signature="2897:2946" ph="{...}" />
+                    <marker date="1517058293000" expanded="true" signature="3143:3922" ph="{...}" />
+                    <marker date="1517058293000" expanded="true" signature="3179:3919" ph="{...}" />
+                    <marker date="1517058293000" expanded="true" signature="3384:3528" ph="/* platforms that should not have quit button ... */" />
+                    <marker date="1517058293000" expanded="true" signature="3641:3724" ph="/* case RuntimePlatform.OSXWebPlayer: ... */" />
+                    <marker date="1517058293000" expanded="true" signature="3925:4042" ph="/* Public functions below that are available via the UI Event Triggers, such as on Buttons. ... */" />
+                    <marker date="1517058293000" expanded="true" signature="4077:4786" ph="{...}" />
+                    <marker date="1517058293000" expanded="true" signature="4294:4783" ph="{...}" />
+                    <marker date="1517058293000" expanded="true" signature="4865:5044" ph="{...}" />
+                    <marker date="1517058293000" expanded="true" signature="5087:5116" ph="{...}" />
                   </folding>
                 </state>
               </provider>
@@ -292,7 +292,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1517042720380</updated>
-      <workItem from="1517042722066" duration="4009000" />
+      <workItem from="1517042722066" duration="4543000" />
     </task>
     <task id="LOCAL-00001" summary="。。">
       <created>1517056622210</created>
@@ -322,11 +322,18 @@
       <option name="project" value="LOCAL" />
       <updated>1517058262572</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Merge branch 'master' of https://gitee.com/misskanagi/project_road&#10;&#10;# Conflicts:&#10;#&#9;Assets/Animations.meta&#10;#&#9;Assets/Scenes/Level 1.unity.meta&#10;#&#9;Assets/Scenes/test.unity.meta&#10;#&#9;ProjectSettings/TagManager.asset">
+      <created>1517058268719</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1517058268719</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4009000" />
+    <option name="totallyTimeSpent" value="4543000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -425,22 +432,22 @@
         <state relative-caret-position="-110">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1517042025000" expanded="false" signature="6:276" ph="..." />
-            <marker date="1517042025000" expanded="true" signature="360:5117" ph="{...}" />
-            <marker date="1517042025000" expanded="true" signature="1209:1507" ph="{...}" />
-            <marker date="1517042025000" expanded="true" signature="1510:1629" ph="/* loop through all the LevelButtons and set them to interactable ... */" />
-            <marker date="1517042025000" expanded="true" signature="1653:3008" ph="{...}" />
-            <marker date="1517042025000" expanded="true" signature="1842:3005" ph="{...}" />
-            <marker date="1517042025000" expanded="true" signature="2896:2945" ph="{...}" />
-            <marker date="1517042025000" expanded="true" signature="3142:3921" ph="{...}" />
-            <marker date="1517042025000" expanded="true" signature="3178:3918" ph="{...}" />
-            <marker date="1517042025000" expanded="true" signature="3383:3527" ph="/* platforms that should not have quit button ... */" />
-            <marker date="1517042025000" expanded="true" signature="3640:3723" ph="/* case RuntimePlatform.OSXWebPlayer: ... */" />
-            <marker date="1517042025000" expanded="true" signature="3924:4041" ph="/* Public functions below that are available via the UI Event Triggers, such as on Buttons. ... */" />
-            <marker date="1517042025000" expanded="true" signature="4076:4785" ph="{...}" />
-            <marker date="1517042025000" expanded="true" signature="4293:4782" ph="{...}" />
-            <marker date="1517042025000" expanded="true" signature="4864:5043" ph="{...}" />
-            <marker date="1517042025000" expanded="true" signature="5086:5115" ph="{...}" />
+            <marker date="1517058293000" expanded="false" signature="6:276" ph="..." />
+            <marker date="1517058293000" expanded="true" signature="360:5118" ph="{...}" />
+            <marker date="1517058293000" expanded="true" signature="1210:1508" ph="{...}" />
+            <marker date="1517058293000" expanded="true" signature="1511:1630" ph="/* loop through all the LevelButtons and set them to interactable ... */" />
+            <marker date="1517058293000" expanded="true" signature="1654:3009" ph="{...}" />
+            <marker date="1517058293000" expanded="true" signature="1843:3006" ph="{...}" />
+            <marker date="1517058293000" expanded="true" signature="2897:2946" ph="{...}" />
+            <marker date="1517058293000" expanded="true" signature="3143:3922" ph="{...}" />
+            <marker date="1517058293000" expanded="true" signature="3179:3919" ph="{...}" />
+            <marker date="1517058293000" expanded="true" signature="3384:3528" ph="/* platforms that should not have quit button ... */" />
+            <marker date="1517058293000" expanded="true" signature="3641:3724" ph="/* case RuntimePlatform.OSXWebPlayer: ... */" />
+            <marker date="1517058293000" expanded="true" signature="3925:4042" ph="/* Public functions below that are available via the UI Event Triggers, such as on Buttons. ... */" />
+            <marker date="1517058293000" expanded="true" signature="4077:4786" ph="{...}" />
+            <marker date="1517058293000" expanded="true" signature="4294:4783" ph="{...}" />
+            <marker date="1517058293000" expanded="true" signature="4865:5044" ph="{...}" />
+            <marker date="1517058293000" expanded="true" signature="5087:5116" ph="{...}" />
           </folding>
         </state>
       </provider>
