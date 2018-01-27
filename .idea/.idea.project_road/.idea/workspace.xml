@@ -4,11 +4,6 @@
     <list default="true" id="b3f3d058-2372-40ff-ac4a-6c0e46d1c614" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.project_road/.idea/contentModel.xml" afterPath="$PROJECT_DIR$/.idea/.idea.project_road/.idea/contentModel.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.project_road/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/.idea.project_road/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/GGJ/Messenger.prefab" afterPath="$PROJECT_DIR$/Assets/Prefabs/GGJ/Messenger.prefab" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/GameManager.prefab" afterPath="$PROJECT_DIR$/Assets/Prefabs/GameManager.prefab" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level 1.unity" afterPath="$PROJECT_DIR$/Assets/Scenes/Level 1.unity" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Object/Missile.cs" afterPath="$PROJECT_DIR$/Assets/Scripts/Object/Missile.cs" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Object/Missile_Cannon.cs" afterPath="$PROJECT_DIR$/Assets/Scripts/Object/Missile_Cannon.cs" />
     </list>
     <ignored path=".idea/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -263,7 +258,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1517042720380</updated>
-      <workItem from="1517042722066" duration="12843000" />
+      <workItem from="1517042722066" duration="12851000" />
     </task>
     <task id="LOCAL-00001" summary="。。">
       <created>1517056622210</created>
@@ -335,11 +330,18 @@
       <option name="project" value="LOCAL" />
       <updated>1517078105391</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Merge branch 'master' of https://gitee.com/misskanagi/project_road&#10;&#10;# Conflicts:&#10;#&#9;Assets/Scenes/Level 1.unity&#10;#&#9;Assets/Scripts/LSM/Enemy_Cannon.cs">
+      <created>1517078115862</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1517078115862</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12843000" />
+    <option name="totallyTimeSpent" value="12851000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
