@@ -18,7 +18,7 @@ namespace GOAT{
 				old_scale.x = -1;
 				this.transform.localScale = old_scale;
 			}
-			InvokeRepeating ("ThrowMissile", 0f, throwRate);
+			InvokeRepeating ("ThrowMissile", 0f, 1.0f/throwRate);
 		}
 
 		void Update() {
