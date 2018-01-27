@@ -69,6 +69,39 @@ namespace GOAT
 			InitGame();
 		}
 
+		void OnEnable ()
+		{
+			EventManager.StartListening ("Player1Death", OnPlayerDeath);
+			EventManager.StartListening ("Player2Death", OnPlayerDeath);
+			EventManager.StartListening ("Player1ArriveMailbox", OnPlayerArriveMailbox);
+			EventManager.StartListening ("Player2ArriveMailbox", OnPlayerArriveMailbox);
+			EventManager.StartListening ("Player1ArriveMessenger", OnPlayerArriveMessenger);
+			EventManager.StartListening ("Player2ArriveMessenger", OnPlayerArriveMessenger);
+
+		}
+
+		void OnDisable ()
+		{
+			EventManager.StopListening ("Player1Death", OnPlayerDeath);
+			EventManager.StopListening ("Player2Death", OnPlayerDeath);
+			EventManager.StopListening ("Player1ArriveMailbox", OnPlayerArriveMailbox);
+			EventManager.StopListening ("Player2ArriveMailbox", OnPlayerArriveMailbox);
+			EventManager.StopListening ("Player1ArriveMessenger", OnPlayerArriveMessenger);
+			EventManager.StopListening ("Player2ArriveMessenger", OnPlayerArriveMessenger);
+
+		}
+
+		void OnPlayerDeath(){
+			playerDead ();
+		}
+
+		void OnPlayerArriveMailbox(){
+			playerGainScore (2);
+		}
+		void OnPlayerArriveMessenger(){
+			playerGainScore (1);
+		}
+
 		//this is called only once, and the paramter tell it to be called only after the scene was loaded
 		//(otherwise, our Scene Load callback would be called the very first load, and we don't want that)
 		[RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
@@ -116,6 +149,8 @@ namespace GOAT
 			if (Players == null) {
 				Players = GameObject.FindGameObjectsWithTag ("Player");
 			}
+
+
 
 			//get stored player prefs
 			refreshPlayerState();
@@ -201,7 +236,7 @@ namespace GOAT
 		//get the UI ready for the game
 		void refreshGUI(){
 			if (UIScore != null && UIHighScore != null && UIReminingTime != null) {
-
+				highScore = PlayerPrefManager.GetHighscore ();
 				UIScore.text = "Score: " + score.ToString ();
 				UIHighScore.text = "HighScore: " + highScore.ToString ();
 				UIReminingTime.text = ""+reminingTime.ToString ();
@@ -215,7 +250,7 @@ namespace GOAT
 			}
 		}
 
-		public bool playerDead(){
+		bool playerDead(){
 			if (lives > 0) {
 				lives--;
 				for (int i = 0; i < UIExtraLives.Length; i++) {
@@ -231,17 +266,16 @@ namespace GOAT
 			}
 		}
 
-		public void playerGetScore(int s){
+		void playerGainScore(int s){
 			score += s; 
 			UIScore.text = "Score: " + score.ToString ();
 			if (score > highScore) {
 				highScore = score;
 				UIHighScore.text = "HighScore: " + highScore.ToString ();
+				PlayerPrefManager.SetHighscore (highScore);
 			}
 		}
-
-
-
+			
 	}
 }
 
