@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Border
+  - Enemy
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - Player
+  - Tank
+  - Plane
+  - Messager
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Background
+    uniqueID: 2440372331
+    locked: 0
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Tank
+    uniqueID: 1799952009
+    locked: 0
+  - name: Player
+    uniqueID: 2051416071
+    locked: 0
+  - name: Plane
+    uniqueID: 1202854475
+    locked: 0
+  - name: Messager
+    uniqueID: 2527228517
+    locked: 0
