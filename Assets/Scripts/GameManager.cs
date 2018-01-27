@@ -81,7 +81,7 @@ namespace GOAT
 		//This is called each time a scene is loaded.
 		static private void OnSceneLoaded(Scene arg0, LoadSceneMode arg1)
 		{
-			instance.level++;
+			//instance.level++;
 			instance.InitGame();
 		}
 
@@ -158,9 +158,12 @@ namespace GOAT
 			//Start moving enemies.
 			//StartCoroutine (MoveEnemies ());
 			reminingTime -= Time.deltaTime;
-			if (reminingTime <= 0)
+			if (reminingTime <= 0 || lives <= 0) {
+				SceneManager.LoadScene("GameLose");
 				return;
-			
+
+			}
+
 			int minute = (int)(reminingTime / 60);
 			int second = (int)(Mathf.Floor(reminingTime % 60));
 			int millionSecond = (int)((reminingTime * 100) % 100);
@@ -226,7 +229,7 @@ namespace GOAT
 			if (lives > 0) {
 				lives--;
 				for (int i = 0; i < UIExtraLives.Length; i++) {
-					if (i < (lives - 1)) {
+					if (i < lives) {
 						UIExtraLives[i].SetActive (true);
 					} else {
 						UIExtraLives [i].SetActive (false);
