@@ -49,7 +49,7 @@ namespace GOAT{
 				thisEvent.AddListener (listener);
 			} 
 			else
-			{
+			{ 
 				thisEvent = new UnityEvent ();
 				thisEvent.AddListener (listener);
 				instance.eventDictionary.Add (eventName, thisEvent);

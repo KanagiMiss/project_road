@@ -10,6 +10,13 @@ namespace GOAT{
 		NORMAL,
 		SERIOUS
 	}
+	
+	public enum MissileDirection {
+		UP,
+		DOWN,
+		LEFT,
+		RIGHT
+	}
 
 
 
