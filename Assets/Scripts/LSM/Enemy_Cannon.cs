@@ -7,6 +7,7 @@ public class Enemy_Cannon : Enemy {
 
 	public GameObject prefabMissile;
 
+	private bool on_moving = true;
 	private bool has_launched = false;  //一辆Cannon只能停下来开火一次
 	private float launch_point_x;    //开火点
 	//随机先选取一个点作为开火点，然后开到那里以后就停下来，随机选取一个方向进行开火！
@@ -20,12 +21,18 @@ public class Enemy_Cannon : Enemy {
 			this.GetComponent<Animator>().SetBool("left_to_right", false);
 		}
 
+		this.speed = 3.0f;
+
 		//0~18是x轴的范围
 		launch_point_x = 1.0f * Random.Range (4, 14);
 	}
 
 	void Update() {
-		Move ();  //不同的敌人有不同的Move()函数
+		if (on_moving)
+		{
+			Move();
+		}
+		//Move ();  //不同的敌人有不同的Move()函数
 	}
 
 
@@ -44,10 +51,12 @@ public class Enemy_Cannon : Enemy {
 					this.transform.position.x <= launch_point_x)) {
 				//这个时候已经到了开火点
 				has_launched = true;
+				on_moving = false;
 				//Fire!!!
 				print("Fire!!!");
-				Fire ();
+				StartCoroutine(Fire ());
 			}
+			
 		} 
 
 
@@ -64,9 +73,12 @@ public class Enemy_Cannon : Enemy {
 
 
 	//开火
-	void Fire() {
-		//随机选取一个射程进行开火，射程只有1~2之间
-		float launch_distance = Random.Range (1.0f, 2.0f);
+	IEnumerator Fire()
+	{
+		yield return new WaitForSeconds(1f);
+		//随机选取一个射程进行开火，射程只有2~4之间
+		float launch_distance = Random.Range (2.0f, 5.0f);
+		//float launch_distance = 5.0f;
 
 		//随机选取开火次数，有1次
 		int launch_times = Random.Range (1, 2);
@@ -95,7 +107,8 @@ public class Enemy_Cannon : Enemy {
 				break;
 			}
 			//真的发射！
-			go.GetComponent<Missile> ().Throw (transform.position, launch_direction, launch_distance);
+			go.GetComponent<Missile_Cannon> ().Throw (transform.position, launch_direction, launch_distance);
+			on_moving = true;
 		}
 	}
 

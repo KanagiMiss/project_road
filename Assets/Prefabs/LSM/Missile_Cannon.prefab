@@ -21,8 +21,9 @@ GameObject:
   - component: {fileID: 4238972078721544}
   - component: {fileID: 212009969458483056}
   - component: {fileID: 58018477824814170}
-  - component: {fileID: 114865824317179936}
+  - component: {fileID: 114088258040268674}
   - component: {fileID: 50491901623136008}
+  - component: {fileID: 95900737591169542}
   m_Layer: 8
   m_Name: Missile_Cannon
   m_TagString: Enemy
@@ -78,7 +79,24 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.30189052
---- !u!114 &114865824317179936
+--- !u!95 &95900737591169542
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1267948627838690}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d458c1c3bd70b4a7d8e2d4221e460065, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114088258040268674
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -86,7 +104,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1267948627838690}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 315e5932a362c4fa399d0fc1a33d97f9, type: 3}
+  m_Script: {fileID: 11500000, guid: e1b072bd6adef42c9b996e55de0db774, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   missile_type: 1
@@ -128,8 +146,8 @@ SpriteRenderer:
   m_SortingLayerID: 2051416071
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: ec2f8f7c8b73317409f9b2e46e7e09e8, type: 3}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 1156d7ccfca144e199b631ef6a63217d, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

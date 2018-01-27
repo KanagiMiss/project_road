@@ -2,20 +2,13 @@
 <project version="4">
   <component name="ContentModelStore">
     <e p="$PROJECT_DIR$" t="IncludeRecursive">
-      <e p="Assembly-CSharp-Editor-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
-        <e p="Plugins" t="Include">
-          <e p="Editor" t="Include">
-            <e p="JetBrains" t="Include">
-              <e p="Unity3DRider.cs" t="Include" />
-            </e>
-          </e>
-        </e>
         <e p="Scripts" t="Include">
           <e p="BoardManager.cs" t="Include" />
           <e p="Border.cs" t="Include" />
           <e p="Enemy.cs" t="Include" />
+          <e p="GameLoseManager.cs" t="Include" />
           <e p="GameManager.cs" t="Include" />
           <e p="GGJ" t="Include">
             <e p="Enemy_Sapper.cs" t="Include" />
@@ -28,21 +21,24 @@
             <e p="Enemy_Cannon.cs" t="Include" />
             <e p="Enemy_Plane_1.cs" t="Include" />
             <e p="Enemy_Plane_2.cs" t="Include" />
-            <e p="Enemy_soldier.cs" t="Include" />
             <e p="Enemy_Tank.cs" t="Include" />
             <e p="Main.cs" t="Include" />
             <e p="Missile.cs" t="Include" />
+            <e p="Missile_Cannon.cs" t="Include" />
             <e p="player.cs" t="Include" />
             <e p="ThunderBarrier.cs" t="Include" />
             <e p="Utils.cs" t="Include" />
           </e>
           <e p="MainMenuManager.cs" t="Include" />
-          <e p="MenuButtonLoadLevel.cs" t="Include" />
           <e p="MenuPauseAndLoadLevel.cs" t="Include" />
           <e p="player.cs" t="Include" />
           <e p="PlayerPrefManager.cs" t="Include" />
           <e p="SoundManager.cs" t="Include" />
           <e p="Wall.cs" t="Include" />
+          <e p="wuhao" t="Include">
+            <e p="Bullet.cs" t="Include" />
+            <e p="Enemy_Soldier_Shoot.cs" t="Include" />
+          </e>
         </e>
         <e p="UI" t="Include">
           <e p="Scripts" t="Include">
