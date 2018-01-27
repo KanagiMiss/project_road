@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -114,18 +114,7 @@ namespace GOAT
 			//Call the SetupScene function of the BoardManager script, pass it current level number.
 			boardScript.SetupScene(level);
 			if (Players == null) {
-				Players = GameObject.FindGameObjectsWithTag ("Hero");
-			}
-			if (Players == null) {
-				Debug.LogError ("Player not found in Game Manager!");
-			}
-
-			if (UIScore == null) {
-				Debug.LogError ("need to set UIScore on Game Manager!");
-			}
-
-			if (UIHighScore == null) {
-				Debug.LogError ("need to set UIHighScore on Game Manager!");
+				Players = GameObject.FindGameObjectsWithTag ("Player");
 			}
 
 			//get stored player prefs
@@ -161,15 +150,13 @@ namespace GOAT
 			if (reminingTime <= 0 || lives <= 0) {
 				SceneManager.LoadScene("GameLose");
 				return;
+			} else {
+				int minute = (int)(reminingTime / 60);
+				int second = (int)(Mathf.Floor(reminingTime % 60));
+				int millionSecond = (int)((reminingTime * 100) % 100);
 
+				UIReminingTime.text = number2Text(minute)+ ":" + number2Text(second) + ":" +number2Text(millionSecond);
 			}
-
-			int minute = (int)(reminingTime / 60);
-			int second = (int)(Mathf.Floor(reminingTime % 60));
-			int millionSecond = (int)((reminingTime * 100) % 100);
-
-			UIReminingTime.text = number2Text(minute)+ ":" + number2Text(second) + ":" +number2Text(millionSecond);
-
 		}
 
 		private string number2Text(int number){
@@ -213,16 +200,19 @@ namespace GOAT
 
 		//get the UI ready for the game
 		void refreshGUI(){
-			UIScore.text = "Score: " + score.ToString ();
-			UIHighScore.text = "HighScore: " + highScore.ToString ();
-			UIReminingTime.text = reminingTime.ToString ();
-			for (int i = 0; i < UIExtraLives.Length; i++) {
-				if (i < (lives)) {
-					UIExtraLives[i].SetActive (true);
-				} else {
-					UIExtraLives[i].SetActive (false);
-				}
-			} 
+			if (UIScore != null && UIHighScore != null && UIReminingTime != null) {
+
+				UIScore.text = "Score: " + score.ToString ();
+				UIHighScore.text = "HighScore: " + highScore.ToString ();
+				UIReminingTime.text = ""+reminingTime.ToString ();
+				for (int i = 0; i < UIExtraLives.Length; i++) {
+					if (i < (lives)) {
+						UIExtraLives[i].SetActive (true);
+					} else {
+						UIExtraLives[i].SetActive (false);
+					}
+				} 
+			}
 		}
 
 		public bool playerDead(){

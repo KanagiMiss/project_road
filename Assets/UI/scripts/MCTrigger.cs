@@ -2,13 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MCTrigger : MonoBehaviour {
+namespace GOAT{
 
-	public Dialogue dialogue;
+	public class MCTrigger : MonoBehaviour {
 
-	public void TriggerDialogue ()
-	{
-		FindObjectOfType<MCManager>().StartDialogue(dialogue);
+		public Dialogue dialogue;
+
+		public void TriggerDialogue ()
+		{
+			FindObjectOfType<MCManager>().StartDialogue(dialogue);
+		}
+
 	}
-
 }

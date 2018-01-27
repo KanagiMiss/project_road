@@ -1,0 +1,573 @@
+fileFormatVersion: 2
+guid: 182043461d3874698a4ae1f69eb40eb8
+timeCreated: 1517043214
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Cannon_0
+    21300002: Cannon_1
+    21300004: Cannon_2
+    21300006: Cannon_3
+    21300008: Cannon_4
+    21300010: Cannon_5
+    21300012: Cannon_6
+    21300014: Cannon_7
+    21300016: Cannon_8
+    21300018: Cannon_9
+    21300020: Cannon_10
+    21300022: Cannon_11
+    21300024: Cannon_12
+    21300026: Cannon_13
+    21300028: Cannon_14
+    21300030: Cannon_15
+  externalObjects: {}
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -1
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Cannon_0
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 117
+        width: 22
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Cannon_1
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 117
+        width: 22
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Cannon_2
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 117
+        width: 22
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Cannon_3
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 117
+        width: 22
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Cannon_4
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 79
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Cannon_5
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 79
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Cannon_6
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 79
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Cannon_7
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 79
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Cannon_8
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 41
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Cannon_9
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 41
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Cannon_10
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 41
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Cannon_11
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 41
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Cannon_12
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 6
+        width: 22
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Cannon_13
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 6
+        width: 22
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Cannon_14
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 6
+        width: 22
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Cannon_15
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 6
+        width: 22
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    outline:
+    - - {x: -45, y: -43}
+      - {x: -63, y: -43}
+      - {x: -64, y: -47}
+      - {x: -64, y: -70}
+      - {x: -39, y: -70}
+      - {x: -38, y: -67}
+      - {x: -38, y: -49}
+    - - {x: -29, y: -67}
+      - {x: -28, y: -70}
+      - {x: -3, y: -70}
+      - {x: -3, y: -48}
+      - {x: -4, y: -43}
+      - {x: -24, y: -43}
+      - {x: -29, y: -46}
+    - - {x: 22, y: -43}
+      - {x: 4, y: -43}
+      - {x: 3, y: -47}
+      - {x: 3, y: -70}
+      - {x: 28, y: -70}
+      - {x: 29, y: -67}
+      - {x: 29, y: -49}
+    - - {x: 60, y: -43}
+      - {x: 42, y: -43}
+      - {x: 41, y: -50}
+      - {x: 41, y: -69}
+      - {x: 44, y: -70}
+      - {x: 64, y: -70}
+      - {x: 67, y: -67}
+      - {x: 67, y: -49}
+    - - {x: -43, y: -7}
+      - {x: -60, y: -7}
+      - {x: -66, y: -9}
+      - {x: -66, y: -30}
+      - {x: -62, y: -35}
+      - {x: -44, y: -35}
+      - {x: -38, y: -29}
+      - {x: -38, y: -10}
+    - - {x: -8, y: -7}
+      - {x: -25, y: -7}
+      - {x: -31, y: -9}
+      - {x: -31, y: -30}
+      - {x: -27, y: -35}
+      - {x: -9, y: -35}
+      - {x: -3, y: -29}
+      - {x: -3, y: -10}
+    - - {x: 27, y: -7}
+      - {x: 10, y: -7}
+      - {x: 4, y: -9}
+      - {x: 4, y: -30}
+      - {x: 8, y: -35}
+      - {x: 26, y: -35}
+      - {x: 32, y: -29}
+      - {x: 32, y: -10}
+    - - {x: 62, y: -7}
+      - {x: 45, y: -7}
+      - {x: 39, y: -9}
+      - {x: 39, y: -30}
+      - {x: 43, y: -35}
+      - {x: 61, y: -35}
+      - {x: 67, y: -29}
+      - {x: 67, y: -10}
+    - - {x: -61, y: 31}
+      - {x: -64, y: 27}
+      - {x: -64, y: 9}
+      - {x: -60, y: 3}
+      - {x: -36, y: 3}
+      - {x: -36, y: 31}
+    - - {x: -26, y: 31}
+      - {x: -29, y: 27}
+      - {x: -29, y: 9}
+      - {x: -25, y: 3}
+      - {x: -1, y: 3}
+      - {x: -1, y: 31}
+    - - {x: 7, y: 31}
+      - {x: 6, y: 29}
+      - {x: 6, y: 3}
+      - {x: 34, y: 3}
+      - {x: 34, y: 31}
+    - - {x: 45, y: 31}
+      - {x: 41, y: 27}
+      - {x: 41, y: 4}
+      - {x: 44, y: 3}
+      - {x: 69, y: 3}
+      - {x: 69, y: 31}
+    - - {x: -42, y: 68}
+      - {x: -56, y: 68}
+      - {x: -63, y: 66}
+      - {x: -64, y: 62}
+      - {x: -64, y: 44}
+      - {x: -61, y: 41}
+      - {x: -41, y: 41}
+      - {x: -38, y: 44}
+      - {x: -38, y: 64}
+    - - {x: -7, y: 68}
+      - {x: -29, y: 68}
+      - {x: -29, y: 42}
+      - {x: -26, y: 41}
+      - {x: -6, y: 41}
+      - {x: -3, y: 44}
+      - {x: -3, y: 64}
+    - - {x: 28, y: 68}
+      - {x: 14, y: 68}
+      - {x: 7, y: 66}
+      - {x: 6, y: 62}
+      - {x: 6, y: 44}
+      - {x: 9, y: 41}
+      - {x: 29, y: 41}
+      - {x: 32, y: 44}
+      - {x: 32, y: 64}
+    - - {x: 63, y: 68}
+      - {x: 49, y: 68}
+      - {x: 42, y: 66}
+      - {x: 41, y: 62}
+      - {x: 41, y: 44}
+      - {x: 44, y: 41}
+      - {x: 64, y: 41}
+      - {x: 67, y: 44}
+      - {x: 67, y: 64}
+    physicsShape:
+    - - {x: -45, y: -43}
+      - {x: -63, y: -43}
+      - {x: -64, y: -47}
+      - {x: -64, y: -70}
+      - {x: -39, y: -70}
+      - {x: -38, y: -67}
+      - {x: -38, y: -49}
+    - - {x: -29, y: -67}
+      - {x: -28, y: -70}
+      - {x: -3, y: -70}
+      - {x: -3, y: -48}
+      - {x: -4, y: -43}
+      - {x: -24, y: -43}
+      - {x: -29, y: -46}
+    - - {x: 22, y: -43}
+      - {x: 4, y: -43}
+      - {x: 3, y: -47}
+      - {x: 3, y: -70}
+      - {x: 28, y: -70}
+      - {x: 29, y: -67}
+      - {x: 29, y: -49}
+    - - {x: 60, y: -43}
+      - {x: 42, y: -43}
+      - {x: 41, y: -50}
+      - {x: 41, y: -69}
+      - {x: 44, y: -70}
+      - {x: 64, y: -70}
+      - {x: 67, y: -67}
+      - {x: 67, y: -49}
+    - - {x: -43, y: -7}
+      - {x: -60, y: -7}
+      - {x: -66, y: -9}
+      - {x: -66, y: -30}
+      - {x: -62, y: -35}
+      - {x: -44, y: -35}
+      - {x: -38, y: -29}
+      - {x: -38, y: -10}
+    - - {x: -8, y: -7}
+      - {x: -25, y: -7}
+      - {x: -31, y: -9}
+      - {x: -31, y: -30}
+      - {x: -27, y: -35}
+      - {x: -9, y: -35}
+      - {x: -3, y: -29}
+      - {x: -3, y: -10}
+    - - {x: 27, y: -7}
+      - {x: 10, y: -7}
+      - {x: 4, y: -9}
+      - {x: 4, y: -30}
+      - {x: 8, y: -35}
+      - {x: 26, y: -35}
+      - {x: 32, y: -29}
+      - {x: 32, y: -10}
+    - - {x: 62, y: -7}
+      - {x: 45, y: -7}
+      - {x: 39, y: -9}
+      - {x: 39, y: -30}
+      - {x: 43, y: -35}
+      - {x: 61, y: -35}
+      - {x: 67, y: -29}
+      - {x: 67, y: -10}
+    - - {x: -61, y: 31}
+      - {x: -64, y: 27}
+      - {x: -64, y: 9}
+      - {x: -60, y: 3}
+      - {x: -36, y: 3}
+      - {x: -36, y: 31}
+    - - {x: -26, y: 31}
+      - {x: -29, y: 27}
+      - {x: -29, y: 9}
+      - {x: -25, y: 3}
+      - {x: -1, y: 3}
+      - {x: -1, y: 31}
+    - - {x: 7, y: 31}
+      - {x: 6, y: 29}
+      - {x: 6, y: 3}
+      - {x: 34, y: 3}
+      - {x: 34, y: 31}
+    - - {x: 45, y: 31}
+      - {x: 41, y: 27}
+      - {x: 41, y: 4}
+      - {x: 44, y: 3}
+      - {x: 69, y: 3}
+      - {x: 69, y: 31}
+    - - {x: -42, y: 68}
+      - {x: -56, y: 68}
+      - {x: -63, y: 66}
+      - {x: -64, y: 62}
+      - {x: -64, y: 44}
+      - {x: -61, y: 41}
+      - {x: -41, y: 41}
+      - {x: -38, y: 44}
+      - {x: -38, y: 64}
+    - - {x: -7, y: 68}
+      - {x: -29, y: 68}
+      - {x: -29, y: 42}
+      - {x: -26, y: 41}
+      - {x: -6, y: 41}
+      - {x: -3, y: 44}
+      - {x: -3, y: 64}
+    - - {x: 28, y: 68}
+      - {x: 14, y: 68}
+      - {x: 7, y: 66}
+      - {x: 6, y: 62}
+      - {x: 6, y: 44}
+      - {x: 9, y: 41}
+      - {x: 29, y: 41}
+      - {x: 32, y: 44}
+      - {x: 32, y: 64}
+    - - {x: 63, y: 68}
+      - {x: 49, y: 68}
+      - {x: 42, y: 66}
+      - {x: 41, y: 62}
+      - {x: 41, y: 44}
+      - {x: 44, y: 41}
+      - {x: 64, y: 41}
+      - {x: 67, y: 44}
+      - {x: 67, y: 64}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

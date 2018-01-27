@@ -2,13 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BFTrigger : MonoBehaviour {
+namespace GOAT{
 
-	public Dialogue dialogue;
+	public class BFTrigger : MonoBehaviour {
 
-	public void TriggerDialogue ()
-	{
-		FindObjectOfType<BFManager>().StartDialogue(dialogue);
+		public Dialogue dialogue;
+
+		public void TriggerDialogue ()
+		{
+			FindObjectOfType<BFManager>().StartDialogue(dialogue);
+		}
+
 	}
 
 }

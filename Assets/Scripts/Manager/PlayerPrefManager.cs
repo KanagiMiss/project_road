@@ -40,7 +40,7 @@ public static class PlayerPrefManager {
 		PlayerPrefs.SetInt("Highscore",highscore);
 	}
 
-	public static int GetReminingTime() {
+	public static float GetReminingTime() {
 		if (PlayerPrefs.HasKey("ReminingTime")) {
 			return PlayerPrefs.GetInt("ReminingTime");
 		} else {
@@ -48,19 +48,19 @@ public static class PlayerPrefManager {
 		}
 	}
 
-	public static void SetReminingTime(int ReminingTime) {
-		PlayerPrefs.SetInt("ReminingTime",ReminingTime);
+	public static void SetReminingTime(float ReminingTime) {
+		PlayerPrefs.SetFloat("ReminingTime",ReminingTime);
 	}
 
 
 
 	// story the current player state info into PlayerPrefs
-	public static void SavePlayerState(int score, int highScore, int lives, int ReminingTime) {
+	public static void SavePlayerState(int score, int highScore, int lives, float ReminingTime) {
 		// save currentscore and lives to PlayerPrefs for moving to next level
 		PlayerPrefs.SetInt("Score",score);
 		PlayerPrefs.SetInt("Lives",lives);
 		PlayerPrefs.SetInt("Highscore",highScore);
-		PlayerPrefs.SetInt ("ReminingTime",ReminingTime);
+		PlayerPrefs.SetFloat ("ReminingTime",ReminingTime);
 	}
 	
 	// reset stored player state and variables back to defaults
@@ -68,7 +68,7 @@ public static class PlayerPrefManager {
 		Debug.Log ("Player State reset.");
 		PlayerPrefs.SetInt("Lives",startLives);
 		PlayerPrefs.SetInt("Score", 0);
-		PlayerPrefs.SetInt ("ReminingTime", 0);
+		PlayerPrefs.SetFloat ("ReminingTime", 0);
 
 		if (resetHighscore)
 			PlayerPrefs.SetInt("Highscore", 0);
