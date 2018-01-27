@@ -66,7 +66,6 @@ namespace GOAT
 			boardScript = GetComponent<BoardManager>();
 
 			//Call the InitGame function to initialize the first level 
-			//Debug.Log("!!!!!!!!!!!!!!!!!!!!FDSFADSF");
 			InitGame();
 		}
 
@@ -90,7 +89,6 @@ namespace GOAT
 		//Initializes the game for each level.
 		void InitGame()
 		{
-			//Debug.LogError ("Init game has been called!!!");
 			/*
 			//While doingSetup is true the player can't move, prevent player from moving while title card is up.
 			doingSetup = true;
