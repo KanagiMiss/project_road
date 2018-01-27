@@ -2,12 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[System.Serializable]
-public class Dialogue {
+namespace GOAT{
 
-	public string title;
+	[System.Serializable]
+	public class Dialogue {
 
-	[TextArea(3, 10)]
-	public string[] sentences;
+		public string title;
 
+		[TextArea(3, 10)]
+		public string[] sentences;
+
+	}
 }
