@@ -26,13 +26,14 @@ public class Enemy : MonoBehaviour {
 		} else {
 			direction = EnemyDirection.RIGHT_TO_LEFT;
 		}
+
 		//0f后开始，没2f调用一次CheckOffScreen
 		//InvokeRepeating ("CheckOffScreen", 0f , 2f);
 	}
 
 	// Use this for initialization
 	void Start () {
-
+		
 	}
 
 	// Update is called once per frame

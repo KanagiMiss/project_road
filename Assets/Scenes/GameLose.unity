@@ -180,7 +180,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Sparty will rise again!
+  m_Text: Try again!
 --- !u!222 &283140728
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -197,7 +197,6 @@ GameObject:
   - component: {fileID: 316837617}
   - component: {fileID: 316837616}
   - component: {fileID: 316837615}
-  - component: {fileID: 316837614}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -205,18 +204,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &316837614
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 316837613}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1997211142, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_ForceModuleActive: 0
 --- !u!114 &316837615
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -415,8 +402,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 751980651}
-        m_MethodName: loadLevel
+      - m_Target: {fileID: 11500000, guid: fc8e60745234148e7b0a1ed735c4212b, type: 3}
+        m_MethodName: set_name
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -580,9 +567,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 751980650}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b9cd472bbab2448a3a77473b12940c7f, type: 3}
+  m_Script: {fileID: 11500000, guid: fc8e60745234148e7b0a1ed735c4212b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  button: {fileID: 372197451}
 --- !u!4 &751980652
 Transform:
   m_ObjectHideFlags: 0
@@ -663,7 +651,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Main Menu
+  m_Text: MainMenu
 --- !u!222 &948323200
 CanvasRenderer:
   m_ObjectHideFlags: 0
