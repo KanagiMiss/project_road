@@ -5,7 +5,7 @@ using UnityEngine;
 namespace GOAT
 {
 	
-	public class PlayerMovement : MonoBehaviour {
+	public class Player : MonoBehaviour {
 
 		// player controls
 		[Range(0.0f, 10.0f)] // create a slider in the editor and set limits on moveSpeed
