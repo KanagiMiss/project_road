@@ -27,13 +27,16 @@ namespace GOAT
 		//code added for UI begin 
 		public int score = 0;
 		public int highScore = 0;
-		public int startLives = 3;
-		public int lives = 3;
-		public int reminingTime = 60;
+		public int startLives = 10;
+		public int lives = 10;
+		public float reminingTime = 60;
 
 		public Text UIScore;
 		public Text UIHighScore;
+		public Text UIReminingTime;
 		public GameObject[] UIExtraLives;
+
+		public GameObject[] Players;
 		//code addeb for UI end
 
 
@@ -109,7 +112,26 @@ namespace GOAT
 			*/
 			//Call the SetupScene function of the BoardManager script, pass it current level number.
 			boardScript.SetupScene(level);
+			if (Players == null) {
+				Players = GameObject.FindGameObjectsWithTag ("Hero");
+			}
+			if (Players == null) {
+				Debug.LogError ("Player not found in Game Manager!");
+			}
 
+			if (UIScore == null) {
+				Debug.LogError ("need to set UIScore on Game Manager!");
+			}
+
+			if (UIHighScore == null) {
+				Debug.LogError ("need to set UIHighScore on Game Manager!");
+			}
+
+			//get stored player prefs
+			refreshPlayerState();
+
+			//get the UI ready for the game
+			refreshGUI();
 		}
 
 
@@ -133,7 +155,9 @@ namespace GOAT
 				return;
 
 			//Start moving enemies.
-			StartCoroutine (MoveEnemies ());
+			//StartCoroutine (MoveEnemies ());
+			reminingTime -= Time.deltaTime;
+			UIReminingTime.text = reminingTime.ToString();
 		}
 
 		//Call this to add the passed in Enemy to the List of Enemy objects.
@@ -157,35 +181,57 @@ namespace GOAT
 			enabled = false;
 		}
 
-		//Coroutine to move enemies in sequence.
-		IEnumerator MoveEnemies()
-		{
-			//While enemiesMoving is true player is unable to move.
-			enemiesMoving = true;
-
-			//Wait for turnDelay seconds, defaults to .1 (100 ms).
-			yield return new WaitForSeconds(turnDelay);
-
-			//If there are no enemies spawned (IE in first level):
-			if (enemies.Count == 0) 
-			{
-				//Wait for turnDelay seconds between moves, replaces delay caused by enemies moving when there are none.
-				yield return new WaitForSeconds(turnDelay);
+		//get stored player prefs
+		void refreshPlayerState(){
+			//lives update
+			//score update
+			//highScore update
+			if(score > highScore){
+				highScore = score;
 			}
-
-			//Loop through List of Enemy objects.
-			for (int i = 0; i < enemies.Count; i++)
-			{
-				//Call the MoveEnemy function of Enemy at index i in the enemies List.
-				//enemies[i].MoveEnemy ();
-
-				//Wait for Enemy's moveTime before moving next Enemy, 
-				//yield return new WaitForSeconds(enemies[i].moveTime);
-			}
-
-			//Enemies are done moving, set enemiesMoving to false.
-			enemiesMoving = false;
 		}
+
+		//get the UI ready for the game
+		void refreshGUI(){
+			UIScore.text = "Score: " + score.ToString ();
+			UIHighScore.text = "HighScore: " + highScore.ToString ();
+			UIReminingTime.text = reminingTime.ToString ();
+			for (int i = 0; i < UIExtraLives.Length; i++) {
+				if (i < (lives - 1)) {
+					UIExtraLives[i].SetActive (true);
+				} else {
+					UIExtraLives[i].SetActive (false);
+				}
+			} 
+		}
+
+		public bool playerDead(){
+			if (lives > 0) {
+				lives--;
+				for (int i = 0; i < UIExtraLives.Length; i++) {
+					if (i < (lives - 1)) {
+						UIExtraLives[i].SetActive (true);
+					} else {
+						UIExtraLives [i].SetActive (false);
+					}
+				}
+				return true;
+			} else {
+				return false;
+			}
+		}
+
+		public void playerGetScore(int s){
+			score += s; 
+			UIScore.text = "Score: " + score.ToString ();
+			if (score > highScore) {
+				highScore = score;
+				UIHighScore.text = "HighScore: " + highScore.ToString ();
+			}
+		}
+
+
+
 	}
 }
 
