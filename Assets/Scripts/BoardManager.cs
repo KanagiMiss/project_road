@@ -111,7 +111,6 @@ namespace GOAT
 			}
 		}
 
-
 		//RandomPosition returns a random position from our list gridPositions.
 		Vector3 RandomPosition ()
 		{
