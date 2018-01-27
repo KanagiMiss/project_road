@@ -163,12 +163,12 @@ Prefab:
     - target: {fileID: 224096905719574442, guid: 5195d0fb9aa8c4d1eb82787734d66210,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 13
+      value: -209
       objectReference: {fileID: 0}
     - target: {fileID: 224096905719574442, guid: 5195d0fb9aa8c4d1eb82787734d66210,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 36.437088
+      value: 226
       objectReference: {fileID: 0}
     - target: {fileID: 224096905719574442, guid: 5195d0fb9aa8c4d1eb82787734d66210,
         type: 2}
@@ -233,7 +233,7 @@ Animator:
   m_GameObject: {fileID: 137314959}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 100f5e2a6fb8b4ee597f164604939564, type: 2}
+  m_Controller: {fileID: 9100000, guid: e6a7d41f56fef4fa9bac7447c2a9568c, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -542,12 +542,12 @@ Prefab:
     - target: {fileID: 224519706231184778, guid: 0e7c4f47b680a40d883e4e5db79e712a,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 184
       objectReference: {fileID: 0}
     - target: {fileID: 224519706231184778, guid: 0e7c4f47b680a40d883e4e5db79e712a,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 106
+      value: 151
       objectReference: {fileID: 0}
     - target: {fileID: 224519706231184778, guid: 0e7c4f47b680a40d883e4e5db79e712a,
         type: 2}
