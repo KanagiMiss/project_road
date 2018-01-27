@@ -222,6 +222,24 @@ Prefab:
       propertyPath: UIExtraLives.Array.data[9]
       value: 
       objectReference: {fileID: 303975292}
+    - target: {fileID: 114512205703441310, guid: a6a27244de3254a2cb4ff9b46cc555df,
+        type: 2}
+      propertyPath: blackScreen
+      value: 
+      objectReference: {fileID: 1792393298396632, guid: 483082bb535624370af08deddbc138d7,
+        type: 2}
+    - target: {fileID: 114512205703441310, guid: a6a27244de3254a2cb4ff9b46cc555df,
+        type: 2}
+      propertyPath: visualGC
+      value: 
+      objectReference: {fileID: 1383977967787838, guid: 03299bd36ddd14d97bed64f11228909e,
+        type: 2}
+    - target: {fileID: 114512205703441310, guid: a6a27244de3254a2cb4ff9b46cc555df,
+        type: 2}
+      propertyPath: splitLine
+      value: 
+      objectReference: {fileID: 1150839794226932, guid: 78296e4b30ac94a61b3de701a0f67dd0,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a6a27244de3254a2cb4ff9b46cc555df, type: 2}
   m_IsPrefabParent: 0
@@ -571,9 +589,9 @@ GameObject:
   - component: {fileID: 1120782975}
   - component: {fileID: 1120782974}
   - component: {fileID: 1120782973}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Player2
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -666,12 +684,12 @@ SpriteRenderer:
   m_SortingLayerID: 2051416071
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 05bc0d26a26d44525b69e6d15c927edc, type: 3}
+  m_Sprite: {fileID: 21300112, guid: 05bc0d26a26d44525b69e6d15c927edc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.2, y: 0.2}
+  m_Size: {x: 0.8125, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -1309,9 +1327,9 @@ GameObject:
   - component: {fileID: 1991046791}
   - component: {fileID: 1991046792}
   - component: {fileID: 1991046788}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Player1
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1369,12 +1387,12 @@ SpriteRenderer:
   m_SortingLayerID: 2051416071
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 05bc0d26a26d44525b69e6d15c927edc, type: 3}
+  m_Sprite: {fileID: 21300110, guid: 05bc0d26a26d44525b69e6d15c927edc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.2, y: 0.2}
+  m_Size: {x: 0.8125, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1

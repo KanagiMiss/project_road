@@ -36,10 +36,14 @@ namespace GOAT
 		public GameObject[] foodTiles;									//Array of food prefabs.
 		public GameObject[] enemyTiles;									//Array of enemy prefabs.
 		public GameObject[] outerWallTiles;								//Array of outer tile prefabs.
+		public GameObject splitLine;
+		public GameObject visualGC;
+		public GameObject blackScreen;
 
 		private Transform boardHolder;									//A variable to store a reference to the transform of our Board object.
 		private List <Vector3> gridPositions = new List <Vector3> ();	//A list of possible locations to place tiles.
 		private List <Vector3> gridEnemySpawnPositions = new List <Vector3> ();
+		private List <Vector3> gridEnemySpawnPositionsOrig = new List <Vector3> ();
 
 		//Clears our list gridPositions and prepares it to generate a new board.
 		void InitialiseList ()
@@ -62,23 +66,26 @@ namespace GOAT
 		void InitialiseEnemySpawnPoints()
 		{
 			gridEnemySpawnPositions.Clear ();
-
-			//left most line
 			int x = 0;
-			for (int y = 1; y < rows - 1; ++y)
-			{
+			for (int y = 1; y < rows - 1; ++y) {
+				int random_num = Random.Range (0, 100);
+				if (random_num > 50) {
+					x = 0;
+				} else if (random_num < 50) {
+					x = columns - 1;
+				}
 				if (y != rows / 2) {
 					gridEnemySpawnPositions.Add (new Vector3 (x, y, 0f));
+					gridEnemySpawnPositionsOrig.Add (new Vector3 (x, y, 0f));
 				}
 			}
+		}
 
-			//right most line
-			x = columns-1;
-			for (int y = 1; y < rows - 1; ++y)
-			{
-				if (y != rows / 2) {
-					gridEnemySpawnPositions.Add (new Vector3 (x, y, 0f));
-				}
+		void ResetEnemySpawnPoints()
+		{
+			gridEnemySpawnPositions.Clear();
+			foreach (var pos in gridEnemySpawnPositionsOrig.ToArray()){
+				gridEnemySpawnPositions.Add(pos);
 			}
 		}
 
@@ -147,9 +154,33 @@ namespace GOAT
 			}
 		}
 
+		IEnumerator SpawnEnemy(GameObject[] tileArray, int minimum, int maximum)
+		{
+			while (true) {
+				//Choose a random number of objects to instantiate within the minimum and maximum limits
+				int objectCount = Random.Range (minimum, maximum+1);
+
+				//Instantiate objects until the randomly chosen limit objectCount is reached
+				for(int i = 0; i < objectCount; i++)
+				{
+					int randomIndex = Random.Range (0, gridEnemySpawnPositions.Count);
+					Vector3 randomPosition = gridEnemySpawnPositions[randomIndex];
+					gridEnemySpawnPositions.RemoveAt (randomIndex);
+
+					//Choose a random tile from tileArray and assign it to tileChoice
+					GameObject tileChoice = tileArray[Random.Range (0, tileArray.Length)];
+
+					//Instantiate tileChoice at the position returned by RandomPosition with no change in rotation
+					Instantiate(tileChoice, randomPosition, Quaternion.identity);
+				}
+				ResetEnemySpawnPoints ();
+				yield return new WaitForSeconds(2f);
+			}
+		}
+
 		void LayoutEnemyAtSpawnPoint(GameObject[] tileArray, int minimum, int maximum)
 		{
-			//Choose a random number of objects to instantiate within the minimum and maximum limits
+			/*//Choose a random number of objects to instantiate within the minimum and maximum limits
 			int objectCount = Random.Range (minimum, maximum+1);
 
 			//Instantiate objects until the randomly chosen limit objectCount is reached
@@ -164,19 +195,25 @@ namespace GOAT
 
 				//Instantiate tileChoice at the position returned by RandomPosition with no change in rotation
 				Instantiate(tileChoice, randomPosition, Quaternion.identity);
-			}
+			}*/
+			StartCoroutine(SpawnEnemy(tileArray, minimum, maximum));
 		}
 
-		void LayoutSplitLine(GameObject[] tileArray)
+		void LayoutSplitLine()
 		{
-			for (int x = 0; x < columns; ++x) 
-			{
-				//Choose a random tile from tileArray and assign it to tileChoice
-				GameObject tileChoice = tileArray[Random.Range (0, tileArray.Length)];
+			Instantiate (splitLine, new Vector3 (columns / 2, rows / 2, 0f), Quaternion.identity);
+		}
 
-				//Instantiate tileChoice at the position returned by RandomPosition with no change in rotation
-				Instantiate(tileChoice, new Vector3(x, rows/2), Quaternion.identity);
-			}
+		void LayoutVisualGC()
+		{
+			Instantiate (visualGC, new Vector3 (-2, rows / 2, 0f), Quaternion.identity);
+			Instantiate (visualGC, new Vector3 (columns + 2, rows / 2, 0f), Quaternion.identity);
+		}
+
+		void LayoutBlackScreen()
+		{
+			Instantiate (blackScreen, new Vector3 (-8, rows / 2, 0f), Quaternion.identity);
+			Instantiate (blackScreen, new Vector3 (columns+8, rows / 2, 0f), Quaternion.identity);
 		}
 
 		//SetupScene initializes our level and calls the previous functions to lay out the game board
@@ -195,7 +232,9 @@ namespace GOAT
 			//Instantiate a random number of food tiles based on minimum and maximum, at randomized positions.
 			LayoutObjectAtRandom (foodTiles, foodCount.minimum, foodCount.maximum);
 
-			LayoutSplitLine (wallTiles);
+			LayoutSplitLine ();
+			LayoutVisualGC ();
+			LayoutBlackScreen ();
 
 			//Determine number of enemies based on current level number, based on a logarithmic progression
 			//int enemyCount = (int)Mathf.Log(level, 2f);
@@ -203,7 +242,7 @@ namespace GOAT
 
 			//Instantiate a random number of enemies based on minimum and maximum, at randomized positions.
 			//LayoutObjectAtRandom (enemyTiles, enemyCount, enemyCount);
-			LayoutEnemyAtSpawnPoint (enemyTiles, 15, 15);
+			LayoutEnemyAtSpawnPoint (enemyTiles, 10, 10);
 
 			//Instantiate the exit tile in the upper right hand corner of our game board
 			//Instantiate (exit, new Vector3 (columns - 1, rows - 1, 0f), Quaternion.identity);
