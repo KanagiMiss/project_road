@@ -61,7 +61,15 @@ namespace GOAT{
 		void OnCollisionEnter2D(Collision2D coll){
 			//碰到了中间的界限，此时可以触发一些呼喊的动画以及音效
 			if (is_shining) {
-				print ("OnCollisionEnter2D() : Kill the player!");
+				GameObject other = coll.gameObject;
+				switch (other.tag) {
+				case "Player":  //碰到了Hero
+					//Hero跪了
+					//other.GetComponent<player>().DoDamage(0);  //Hero伤血逻辑
+					print("YOOO");
+					other.GetComponent<Player>().ApplyDamage(5);
+					break;
+				}
 			} else {
 				print ("OnCollisionEnter2D() : Cannot pass through!");
 			}

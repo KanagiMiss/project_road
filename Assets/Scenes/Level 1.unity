@@ -123,7 +123,7 @@ Prefab:
     - target: {fileID: 114512205703441310, guid: a6a27244de3254a2cb4ff9b46cc555df,
         type: 2}
       propertyPath: enemyTiles.Array.size
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4952244269752990, guid: a6a27244de3254a2cb4ff9b46cc555df, type: 2}
       propertyPath: m_LocalPosition.x
@@ -228,6 +228,24 @@ Prefab:
       value: 
       objectReference: {fileID: 1132313752459852, guid: a8fe84c8a61d14b7786165c5dce20ed7,
         type: 2}
+    - target: {fileID: 114512205703441310, guid: a6a27244de3254a2cb4ff9b46cc555df,
+        type: 2}
+      propertyPath: enemyTiles.Array.data[1]
+      value: 
+      objectReference: {fileID: 1144374235872490, guid: 92da5a2482b784795910d5b697e48926,
+        type: 2}
+    - target: {fileID: 114512205703441310, guid: a6a27244de3254a2cb4ff9b46cc555df,
+        type: 2}
+      propertyPath: enemyTiles.Array.data[2]
+      value: 
+      objectReference: {fileID: 1144374235872490, guid: 03fc56e5ad6424b73b5fede7e9d587e2,
+        type: 2}
+    - target: {fileID: 114512205703441310, guid: a6a27244de3254a2cb4ff9b46cc555df,
+        type: 2}
+      propertyPath: enemyTiles.Array.data[0]
+      value: 
+      objectReference: {fileID: 1132313752459852, guid: 670463c0300f54fc7a90d23a72247ef3,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a6a27244de3254a2cb4ff9b46cc555df, type: 2}
   m_IsPrefabParent: 0
@@ -306,7 +324,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 1.0000439, y: -92.24698}
+  m_AnchoredPosition: {x: 1, y: -92.24698}
   m_SizeDelta: {x: 180, y: 40}
   m_Pivot: {x: 1, y: 1}
 --- !u!222 &210016834
@@ -1288,7 +1306,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.99995613, y: -172.24698}
+  m_AnchoredPosition: {x: -1, y: -172.24698}
   m_SizeDelta: {x: 180, y: 40}
   m_Pivot: {x: 1, y: 1}
 --- !u!222 &1596916180
