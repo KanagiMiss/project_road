@@ -125,7 +125,7 @@ MonoBehaviour:
     m_Center: {x: 0, y: 0, z: 0}
     m_Extent: {x: 0, y: 0, z: 0}
   boundsCenterOffset: {x: 0, y: 0, z: 0}
-  prefabMissile: {fileID: 1267948627838690, guid: 27e9b02ef8a364e7cac94eaf773c1de5,
+  prefabMissile: {fileID: 1267948627838690, guid: eadfe606289ff4a09b5d5de51de0b6f3,
     type: 2}
 --- !u!212 &212962429487381102
 SpriteRenderer:

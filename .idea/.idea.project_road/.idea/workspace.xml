@@ -2,8 +2,37 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b3f3d058-2372-40ff-ac4a-6c0e46d1c614" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.project_road/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/.idea.project_road/.idea/workspace.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/Assets/Animations/Missile_Normal.controller" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/Assets/Animations/Missile_Normal_explosion.anim" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/Assets/Animations/Missile_Normal_fly.anim" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/Assets/Prefabs/LSM/Missile_Cannon.prefab" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.project_road/.idea/contentModel.xml" afterPath="$PROJECT_DIR$/.idea/.idea.project_road/.idea/contentModel.xml" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins.meta" afterPath="$PROJECT_DIR$/Assets/Animations/Missile_Normal_explosion.anim.meta" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Editor.meta" afterPath="$PROJECT_DIR$/Assets/Prefabs/LSM/Missile_Cannon.prefab.meta" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Editor/JetBrains.meta" afterPath="$PROJECT_DIR$/Assets/Animations/Missile_Normal_fly.anim.meta" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Editor/JetBrains/Unity3DRider.cs" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Editor/JetBrains/Unity3DRider.cs.meta" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/GGJ/Bomb.prefab" afterPath="$PROJECT_DIR$/Assets/Prefabs/GGJ/Bomb.prefab" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/LSM/Enemy_Cannon.prefab" afterPath="$PROJECT_DIR$/Assets/Prefabs/LSM/Enemy_Cannon.prefab" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/LSM/Enemy_Spyder.prefab.meta" afterPath="$PROJECT_DIR$/Assets/Prefabs/LSM/Enemy_Spyder.prefab.meta" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/wuhao/Enemy_Soldier_Shoot.prefab.meta" afterPath="$PROJECT_DIR$/Assets/Prefabs/wuhao/Enemy_Soldier_Shoot.prefab.meta" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level 1.unity" afterPath="$PROJECT_DIR$/Assets/Scenes/Level 1.unity" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/test.unity" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/test.unity.meta" afterPath="$PROJECT_DIR$/Assets/Animations/Missile_Normal.controller.meta" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/test_BACKUP_18651.unity" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/test_BACKUP_18651.unity.meta" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/test_BASE_18651.unity" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/test_BASE_18651.unity.meta" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/test_LOCAL_18651.unity" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/test_LOCAL_18651.unity.meta" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/test_REMOTE_18651.unity" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/test_REMOTE_18651.unity.meta" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LSM/Enemy_Cannon.cs" afterPath="$PROJECT_DIR$/Assets/Scripts/LSM/Enemy_Cannon.cs" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/scripts/BFManager.cs" afterPath="$PROJECT_DIR$/Assets/UI/scripts/BFManager.cs" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/scripts/BFTrigger.cs" afterPath="$PROJECT_DIR$/Assets/UI/scripts/BFTrigger.cs" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/scripts/Dialogue.cs" afterPath="$PROJECT_DIR$/Assets/UI/scripts/Dialogue.cs" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/scripts/MCManager.cs" afterPath="$PROJECT_DIR$/Assets/UI/scripts/MCManager.cs" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/scripts/MCTrigger.cs" afterPath="$PROJECT_DIR$/Assets/UI/scripts/MCTrigger.cs" />
     </list>
     <ignored path=".idea/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -292,7 +321,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1517042720380</updated>
-      <workItem from="1517042722066" duration="4543000" />
+      <workItem from="1517042722066" duration="4618000" />
     </task>
     <task id="LOCAL-00001" summary="。。">
       <created>1517056622210</created>
@@ -329,11 +358,18 @@
       <option name="project" value="LOCAL" />
       <updated>1517058268719</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Merge branch 'master' of https://gitee.com/misskanagi/project_road&#10;&#10;# Conflicts:&#10;#&#9;Assets/Animations.meta&#10;#&#9;Assets/Scenes/Level 1.unity.meta&#10;#&#9;Assets/Scenes/test.unity.meta&#10;#&#9;ProjectSettings/TagManager.asset">
+      <created>1517061036591</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1517061036591</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4543000" />
+    <option name="totallyTimeSpent" value="4618000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
