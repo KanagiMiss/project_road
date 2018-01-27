@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="$PROJECT_DIR$" t="IncludeRecursive">
+      <e p="Assembly-CSharp-Editor-firstpass.csproj" t="IncludeRecursive" />
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets" t="Include">
+        <e p="Plugins" t="Include">
+          <e p="Editor" t="Include">
+            <e p="JetBrains" t="Include">
+              <e p="Unity3DRider.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Scripts" t="Include">
+          <e p="BoardManager.cs" t="Include" />
+          <e p="Enemy.cs" t="Include" />
+          <e p="GameManager.cs" t="Include" />
+          <e p="GGJ" t="Include">
+            <e p="Enemy_Sapper.cs" t="Include" />
+            <e p="Landmine.cs" t="Include" />
+          </e>
+          <e p="Loader.cs" t="Include" />
+          <e p="LSM" t="Include">
+            <e p="Enemy.cs" t="Include" />
+            <e p="Enemy_Plane_1.cs" t="Include" />
+            <e p="Enemy_Plane_2.cs" t="Include" />
+            <e p="Enemy_soldier.cs" t="Include" />
+            <e p="Enemy_Tank.cs" t="Include" />
+            <e p="Main.cs" t="Include" />
+            <e p="Missile.cs" t="Include" />
+            <e p="player.cs" t="Include" />
+            <e p="ThunderBarrier.cs" t="Include" />
+            <e p="Utils.cs" t="Include" />
+          </e>
+          <e p="MainMenuManager.cs" t="Include" />
+          <e p="MenuButtonLoadLevel.cs" t="Include" />
+          <e p="MenuPauseAndLoadLevel.cs" t="Include" />
+          <e p="player.cs" t="Include" />
+          <e p="PlayerPrefManager.cs" t="Include" />
+          <e p="SoundManager.cs" t="Include" />
+          <e p="Wall.cs" t="Include" />
+        </e>
+        <e p="UI" t="Include">
+          <e p="Scripts" t="Include">
+            <e p="BFManager.cs" t="Include" />
+            <e p="BFTrigger.cs" t="Include" />
+            <e p="Dialogue.cs" t="Include" />
+            <e p="MCManager.cs" t="Include" />
+            <e p="MCTrigger.cs" t="Include" />
+          </e>
+        </e>
+      </e>
+      <e p="Library" t="ExcludeRecursive" />
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="packages" t="ExcludeRecursive" />
+      <e p="project_road.sln" t="IncludeFlat" />
+      <e p="Temp" t="ExcludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+      </e>
+    </e>
+    <e p="$USER_HOME$/Library/Caches/Rider2017.3/resharper-host/local/Transient/ReSharperHost/v11/SolutionCaches/_project_road.-820668779.00" t="ExcludeRecursive" />
+  </component>
+</project>
