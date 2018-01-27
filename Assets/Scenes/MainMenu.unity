@@ -1248,7 +1248,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Super Sparty Bros.
+  m_Text: Super Courier Bros.
 --- !u!222 &1137038750
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1383,7 +1383,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300026, guid: b933cc4e1dbdc483eb4917c95fc6d81e, type: 3}
+  m_Sprite: {fileID: 21300110, guid: 05bc0d26a26d44525b69e6d15c927edc, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
