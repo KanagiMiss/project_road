@@ -240,6 +240,11 @@ Prefab:
       value: 
       objectReference: {fileID: 1150839794226932, guid: 78296e4b30ac94a61b3de701a0f67dd0,
         type: 2}
+    - target: {fileID: 114835519468339338, guid: a6a27244de3254a2cb4ff9b46cc555df,
+        type: 2}
+      propertyPath: reminingTime
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a6a27244de3254a2cb4ff9b46cc555df, type: 2}
   m_IsPrefabParent: 0

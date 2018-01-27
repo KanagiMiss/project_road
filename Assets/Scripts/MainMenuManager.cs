@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement; // include so we can load new scenes
 
 public class MainMenuManager : MonoBehaviour {
 
-	public int startLives=3; // how many lives to start the game with on New Game
+	public int startLives=10; // how many lives to start the game with on New Game
 
 	// references to Submenus
 	public GameObject _MainMenu;

@@ -30,7 +30,7 @@ namespace GOAT
 		public int highScore = 0;
 		public int startLives = 10;
 		public int lives = 10;
-		public float reminingTime = 120;
+		public float reminingTime = 5;
 
 		public Text UIScore;
 		public Text UIHighScore;
@@ -57,7 +57,7 @@ namespace GOAT
 				Destroy(gameObject);	
 
 			//Sets this to not be destroyed when reloading scene
-			DontDestroyOnLoad(gameObject);
+			//DontDestroyOnLoad(gameObject);
 
 			//Assign enemies to a new List of Enemy objects.
 			enemies = new List<Enemy>();
@@ -66,6 +66,7 @@ namespace GOAT
 			boardScript = GetComponent<BoardManager>();
 
 			//Call the InitGame function to initialize the first level 
+			//Debug.Log("!!!!!!!!!!!!!!!!!!!!FDSFADSF");
 			InitGame();
 		}
 
@@ -82,13 +83,14 @@ namespace GOAT
 		static private void OnSceneLoaded(Scene arg0, LoadSceneMode arg1)
 		{
 			//instance.level++;
-			instance.InitGame();
+//			instance.InitGame();
 		}
 
 
 		//Initializes the game for each level.
 		void InitGame()
 		{
+			//Debug.LogError ("Init game has been called!!!");
 			/*
 			//While doingSetup is true the player can't move, prevent player from moving while title card is up.
 			doingSetup = true;
@@ -116,23 +118,13 @@ namespace GOAT
 			if (Players == null) {
 				Players = GameObject.FindGameObjectsWithTag ("Hero");
 			}
-			if (Players == null) {
-				Debug.LogError ("Player not found in Game Manager!");
-			}
-
-			if (UIScore == null) {
-				Debug.LogError ("need to set UIScore on Game Manager!");
-			}
-
-			if (UIHighScore == null) {
-				Debug.LogError ("need to set UIHighScore on Game Manager!");
-			}
 
 			//get stored player prefs
 			refreshPlayerState();
 
 			//get the UI ready for the game
 			refreshGUI();
+
 		}
 
 
@@ -159,17 +151,17 @@ namespace GOAT
 			//StartCoroutine (MoveEnemies ());
 			reminingTime -= Time.deltaTime;
 			if (reminingTime <= 0 || lives <= 0) {
-				SceneManager.LoadScene("GameLose");
+				
+				SceneManager.LoadScene ("GameLose");
+
 				return;
+			} else {
+				int minute = (int)(reminingTime / 60);
+				int second = (int)(Mathf.Floor(reminingTime % 60));
+				int millionSecond = (int)((reminingTime * 100) % 100);
 
+				UIReminingTime.text = number2Text(minute)+ ":" + number2Text(second) + ":" +number2Text(millionSecond);
 			}
-
-			int minute = (int)(reminingTime / 60);
-			int second = (int)(Mathf.Floor(reminingTime % 60));
-			int millionSecond = (int)((reminingTime * 100) % 100);
-
-			UIReminingTime.text = number2Text(minute)+ ":" + number2Text(second) + ":" +number2Text(millionSecond);
-
 		}
 
 		private string number2Text(int number){
@@ -213,16 +205,19 @@ namespace GOAT
 
 		//get the UI ready for the game
 		void refreshGUI(){
-			UIScore.text = "Score: " + score.ToString ();
-			UIHighScore.text = "HighScore: " + highScore.ToString ();
-			UIReminingTime.text = reminingTime.ToString ();
-			for (int i = 0; i < UIExtraLives.Length; i++) {
-				if (i < (lives)) {
-					UIExtraLives[i].SetActive (true);
-				} else {
-					UIExtraLives[i].SetActive (false);
-				}
-			} 
+			if (UIScore != null && UIHighScore != null && UIReminingTime != null) {
+
+				UIScore.text = "Score: " + score.ToString ();
+				UIHighScore.text = "HighScore: " + highScore.ToString ();
+				UIReminingTime.text = ""+reminingTime.ToString ();
+				for (int i = 0; i < UIExtraLives.Length; i++) {
+					if (i < (lives)) {
+						UIExtraLives[i].SetActive (true);
+					} else {
+						UIExtraLives[i].SetActive (false);
+					}
+				} 
+			}
 		}
 
 		public bool playerDead(){
