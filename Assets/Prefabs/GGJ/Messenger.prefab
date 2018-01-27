@@ -118,6 +118,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
+  dmg: 5
   direction: 1
   __________________: 0
   originalColors: []
