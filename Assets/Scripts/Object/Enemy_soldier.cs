@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 namespace GOAT{
-	public class Enemy : MonoBehaviour {
+
+	public class Enemy_soldier : Enemy {
 
 		// Use this for initialization
 		void Start () {
@@ -12,7 +13,15 @@ namespace GOAT{
 		
 		// Update is called once per frame
 		void Update () {
+			Move ();
+		}
+
+
+
+		//
+		public override void Move(){
 			
 		}
 	}
+
 }

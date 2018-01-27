@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -30,7 +30,7 @@ namespace GOAT
 		public int highScore = 0;
 		public int startLives = 10;
 		public int lives = 10;
-		public float reminingTime = 5;
+		public float reminingTime = 120;
 
 		public Text UIScore;
 		public Text UIHighScore;
@@ -82,7 +82,7 @@ namespace GOAT
 		static private void OnSceneLoaded(Scene arg0, LoadSceneMode arg1)
 		{
 			//instance.level++;
-//			instance.InitGame();
+			//instance.InitGame();
 		}
 
 
@@ -114,7 +114,7 @@ namespace GOAT
 			//Call the SetupScene function of the BoardManager script, pass it current level number.
 			boardScript.SetupScene(level);
 			if (Players == null) {
-				Players = GameObject.FindGameObjectsWithTag ("Hero");
+				Players = GameObject.FindGameObjectsWithTag ("Player");
 			}
 
 			//get stored player prefs
@@ -122,7 +122,6 @@ namespace GOAT
 
 			//get the UI ready for the game
 			refreshGUI();
-
 		}
 
 
@@ -149,9 +148,7 @@ namespace GOAT
 			//StartCoroutine (MoveEnemies ());
 			reminingTime -= Time.deltaTime;
 			if (reminingTime <= 0 || lives <= 0) {
-				
-				SceneManager.LoadScene ("GameLose");
-
+				SceneManager.LoadScene("GameLose");
 				return;
 			} else {
 				int minute = (int)(reminingTime / 60);

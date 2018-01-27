@@ -189,8 +189,14 @@ namespace GOAT
 				playerHealth -= damage;
 
 				if (playerHealth <= 0) { // player is now dead, so start dying
-					PlaySound(deathSFX);
+					//PlaySound(deathSFX);
+					if (this.playerId == 1) {
+						EventManager.TriggerEvent ("Player1Death");
+					} else if (this.playerId == 2) {
+						EventManager.TriggerEvent ("Player2Death");
+					}
 					//StartCoroutine (KillPlayer ());
+					Destroy(this.gameObject);
 				}
 			}
 		}

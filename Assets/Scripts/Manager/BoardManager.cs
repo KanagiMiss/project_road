@@ -39,11 +39,43 @@ namespace GOAT
 		public GameObject splitLine;
 		public GameObject visualGC;
 		public GameObject blackScreen;
+		public GameObject player1, player2;
+		public GameObject mailbox1, mailbox2;
+		public GameObject messenger1, messenger2;
 
 		private Transform boardHolder;									//A variable to store a reference to the transform of our Board object.
 		private List <Vector3> gridPositions = new List <Vector3> ();	//A list of possible locations to place tiles.
 		private List <Vector3> gridEnemySpawnPositions = new List <Vector3> ();
 		private List <Vector3> gridEnemySpawnPositionsOrig = new List <Vector3> ();
+		private GameObject mb1, mb2, mg1, mg2;
+
+		private int mailbox_x = 0, mailbox_x_usage = 2;
+
+		void Awake()
+		{
+			mailbox_x_usage = 2;
+			mailbox_x = Random.Range (1, columns - 1);
+		}
+
+		void OnEnable ()
+		{
+			EventManager.StartListening ("Player1ArriveMailbox", OnPlayer1ArriveMailbox);
+			EventManager.StartListening ("Player2ArriveMailbox", OnPlayer2ArriveMailbox);
+			EventManager.StartListening ("Player1ArriveMessenger", OnPlayer1ArriveMessenger);
+			EventManager.StartListening ("Player2ArriveMessenger", OnPlayer2ArriveMessenger);
+			EventManager.StartListening ("Player1Death", OnPlayer1Death);
+			EventManager.StartListening ("Player2Death", OnPlayer2Death);
+		}
+
+		void OnDisable ()
+		{
+			EventManager.StopListening ("Player1ArriveMailbox", OnPlayer1ArriveMailbox);
+			EventManager.StopListening ("Player2ArriveMailbox", OnPlayer2ArriveMailbox);
+			EventManager.StopListening ("Player1ArriveMessenger", OnPlayer1ArriveMessenger);
+			EventManager.StopListening ("Player2ArriveMessenger", OnPlayer2ArriveMessenger);
+			EventManager.StopListening ("Player1Death", OnPlayer1Death);
+			EventManager.StopListening ("Player2Death", OnPlayer2Death);
+		}
 
 		//Clears our list gridPositions and prepares it to generate a new board.
 		void InitialiseList ()
@@ -61,6 +93,54 @@ namespace GOAT
 					gridPositions.Add (new Vector3(x, y, 0f));
 				}
 			}
+		}
+
+		void OnPlayer1Death()
+		{
+			//top
+			Instantiate (player1, new Vector3 (Random.Range(1, columns-1), rows-1, 0f), Quaternion.identity);
+		}
+
+		void OnPlayer2Death()
+		{
+			//bottom
+			Instantiate (player2, new Vector3 (Random.Range(1, columns-1), 0, 0f), Quaternion.identity);
+		}
+
+		void OnPlayer1ArriveMailbox()
+		{
+			Destroy (mb1);
+			//top
+			mg1 = Instantiate (messenger1, new Vector3 (Random.Range(1, columns-1), rows-1, 0f), Quaternion.identity);
+		}
+
+		void OnPlayer2ArriveMailbox()
+		{
+			Destroy (mb2);
+			//bottom
+			mg2 = Instantiate (messenger2, new Vector3 (Random.Range(1, columns-1), 0, 0f), Quaternion.identity);
+		}
+
+		void OnPlayer1ArriveMessenger()
+		{
+			Destroy (mg1);
+			if(mailbox_x_usage <= 0){
+				mailbox_x_usage = 2;
+				mailbox_x = Random.Range (1, columns - 1);
+			}
+			mailbox_x_usage--;
+			mb1 = Instantiate (mailbox1, new Vector3 (mailbox_x, (rows/2)+1f, 0f), Quaternion.identity);
+		}
+
+		void OnPlayer2ArriveMessenger()
+		{
+			Destroy (mg2);
+			if(mailbox_x_usage <= 0){
+				mailbox_x_usage = 2;
+				mailbox_x = Random.Range (1, columns - 1);
+			}
+			mailbox_x_usage--;
+			mb2 = Instantiate (mailbox2, new Vector3 (mailbox_x, (rows/2)-0.5f, 0f), Quaternion.identity);
 		}
 
 		void InitialiseEnemySpawnPoints()
@@ -216,6 +296,31 @@ namespace GOAT
 			Instantiate (blackScreen, new Vector3 (columns+8, rows / 2, 0f), Quaternion.identity);
 		}
 
+		void LayoutPlayer()
+		{
+			//top
+			Instantiate (player1, new Vector3 (Random.Range(1, columns-1), rows-1, 0f), Quaternion.identity);
+			//bottom
+			Instantiate (player2, new Vector3 (Random.Range(1, columns-1), 0, 0f), Quaternion.identity);
+		}
+
+		void LayoutMailbox()
+		{
+			int x = Random.Range (1, columns - 1);
+			//up
+			mb1 = Instantiate (mailbox1, new Vector3 (x, (rows/2)+1f, 0f), Quaternion.identity);
+			//down
+			mb2 = Instantiate (mailbox2, new Vector3 (x, (rows/2)-0.5f, 0f), Quaternion.identity);
+		}
+
+		void LayoutMessenger()
+		{
+			//top
+			mg1 = Instantiate (messenger1, new Vector3 (Random.Range(1, columns-1), rows-1, 0f), Quaternion.identity);
+			//bottom
+			mg2 = Instantiate (messenger2, new Vector3 (Random.Range(1, columns-1), 0, 0f), Quaternion.identity);
+		}
+
 		//SetupScene initializes our level and calls the previous functions to lay out the game board
 		public void SetupScene (int level)
 		{
@@ -235,6 +340,9 @@ namespace GOAT
 			LayoutSplitLine ();
 			LayoutVisualGC ();
 			LayoutBlackScreen ();
+			LayoutMessenger ();
+			//LayoutMailbox ();
+			LayoutPlayer ();
 
 			//Determine number of enemies based on current level number, based on a logarithmic progression
 			//int enemyCount = (int)Mathf.Log(level, 2f);
