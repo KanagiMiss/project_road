@@ -55,7 +55,7 @@ GameObject:
   - component: {fileID: 224096905719574442}
   - component: {fileID: 222806131572073180}
   - component: {fileID: 114810640361332926}
-  - component: {fileID: 95098186621336478}
+  - component: {fileID: 95313913585886916}
   m_Layer: 5
   m_Name: Battlefield
   m_TagString: Untagged
@@ -63,7 +63,7 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!95 &95098186621336478
+--- !u!95 &95313913585886916
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 1
@@ -72,7 +72,7 @@ Animator:
   m_GameObject: {fileID: 1693347628798852}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 77e52133060554949b20bd913b827b6e, type: 2}
+  m_Controller: {fileID: 9100000, guid: e6a7d41f56fef4fa9bac7447c2a9568c, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -210,7 +210,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 13, y: 36.437088}
+  m_AnchoredPosition: {x: -209, y: 226}
   m_SizeDelta: {x: 350, y: 210}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!224 &224666169719929766
