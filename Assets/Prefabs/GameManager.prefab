@@ -72,9 +72,9 @@ MonoBehaviour:
   foodTiles:
   - {fileID: 1637989475286848, guid: 5b4d91ea3c67644248e99fa68c49cd31, type: 2}
   enemyTiles:
-  - {fileID: 1144374235872490, guid: 03fc56e5ad6424b73b5fede7e9d587e2, type: 2}
   - {fileID: 1132313752459852, guid: 670463c0300f54fc7a90d23a72247ef3, type: 2}
   - {fileID: 1144374235872490, guid: 92da5a2482b784795910d5b697e48926, type: 2}
+  - {fileID: 1144374235872490, guid: 03fc56e5ad6424b73b5fede7e9d587e2, type: 2}
   outerWallTiles:
   - {fileID: 1186199766366934, guid: 90fcf1c055a1a44b5aaabe4234484eb0, type: 2}
   splitLine: {fileID: 1150839794226932, guid: 78296e4b30ac94a61b3de701a0f67dd0, type: 2}
@@ -103,8 +103,8 @@ MonoBehaviour:
   playerFoodPoints: 100
   score: 0
   highScore: 0
-  startLives: 3
-  lives: 3
+  startLives: 10
+  lives: 10
   reminingTime: 300
   UIScore: {fileID: 0}
   UIHighScore: {fileID: 0}

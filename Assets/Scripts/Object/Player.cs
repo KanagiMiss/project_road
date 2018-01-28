@@ -252,6 +252,7 @@ namespace GOAT
 		public void ApplyDamage (int damage) {
 			if (playerCanMove) {
 				playerHealth -= damage;
+				EventManager.TriggerEvent ("Damage");
 
 				if (playerHealth <= 0) { // player is now dead, so start dying
 					//PlaySound(deathSFX);

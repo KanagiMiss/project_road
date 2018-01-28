@@ -33,11 +33,13 @@ namespace GOAT{
 			print ("Shine().");
 
 			// 把碰撞体积范围扩大，粒子效果释放
-			BoxCollider2D bc = this.gameObject.GetComponent<BoxCollider2D>();
+			/*BoxCollider2D bc = this.gameObject.GetComponent<BoxCollider2D>();
 			Vector2 origin_size = bc.size;
-			bc.size = new Vector2 (origin_size.x, origin_size.y * 2.5f);
+			bc.size = new Vector2 (origin_size.x, origin_size.y * 2.5f);*/
 			//transform_size = transform.localScale;
 			//transform.localScale = new Vector2(transform.localScale.x, 5);
+			GameObject lightning = this.transform.GetChild(0).gameObject;
+			lightning.SetActive (true);
 			is_shining = true;
 
 			// 持续个2s的效果以后，收回粒子效果，缩小碰撞体积
@@ -49,9 +51,11 @@ namespace GOAT{
 			yield return new WaitForSeconds (2);
 			is_shining = false;
 			//transform.localScale = transform_size;
-			BoxCollider2D bc = this.gameObject.GetComponent<BoxCollider2D>();
+			/*BoxCollider2D bc = this.gameObject.GetComponent<BoxCollider2D>();
 			Vector2 origin_size = bc.size;
-			bc.size = new Vector2 (origin_size.x, origin_size.y / 2.5f);
+			bc.size = new Vector2 (origin_size.x, origin_size.y / 2.5f);*/
+			GameObject lightning = this.transform.GetChild(0).gameObject;
+			lightning.SetActive (false);
 			// 4秒以后调用Shine()，形成循环
 			Invoke ("Shine", 4);
 		}
@@ -63,7 +67,7 @@ namespace GOAT{
 		}
 
 		// 有物体碰撞了电网
-		void OnCollisionEnter2D(Collision2D coll){
+		void OnTriggerStay2D(Collider2D coll){
 			//碰到了中间的界限，此时可以触发一些呼喊的动画以及音效
 			if (is_shining) {
 				GameObject other = coll.gameObject;
