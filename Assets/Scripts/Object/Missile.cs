@@ -25,8 +25,8 @@ namespace GOAT{
 
 		public MissileType missile_type = MissileType.NORMAL;
 		[SerializeField] private float explosion_delay = 1f;  //扔下以后多久爆炸
-		[SerializeField] private float explosion_duration = 1f;  //爆炸持续多久
-
+		[SerializeField] private float explosion_duration = 0.8f;  //爆炸持续多久
+		public int dmg = 5;
 		//底下的不是用户可以在Inspector面板中选择的。
 		CircleCollider2D explosion_circle;
 
@@ -51,12 +51,14 @@ namespace GOAT{
 			transform.position = pos;
 			//过explosion_delay的时间以后爆炸
 			Invoke("Explosion", explosion_delay);
+
 		}
 
 
 		//爆炸函数
 		void Explosion(){
 			print ("Explosion!");
+			this.GetComponent<Animator> ().SetBool ("need_explosion", true);
 			//把collider打开
 			explosion_circle.enabled = true;   
 			StartCoroutine (DestroyMissile());
@@ -71,27 +73,17 @@ namespace GOAT{
 
 
 		//爆炸了！
-		/*void OnCollisionEnter2D(Collision2D coll){
-			print ("Missile : OnCollisionEnter2D().");
+		void OnCollisionEnter2D(Collision2D coll){
 			GameObject other = coll.gameObject;
 			switch (other.tag) {
-			case "Hero":  //碰到了Hero
-				other.GetComponent<player>().DoDamage(0);  //Hero伤血逻辑
+			case "Player":  //碰到了Hero
+				//Hero跪了
+				//other.GetComponent<player>().DoDamage(0);  //Hero伤血逻辑
+				print("YOOO");
+				other.GetComponent<Player>().ApplyDamage(dmg);
 				break;
 			}
-		}*/
-
-
-		//Hero被爆到了
-		void OnTriggerEnter2D(Collider2D other) {
-			print ("Missile : OnTriggerEnter2D().");
-			GameObject go = other.gameObject;
-			if (go != null && go.tag == "Hero") {
-				//如果碰撞到的是玩家，那么干吧
-				//other.GetComponent<player>().DoDamage(0);  //Hero伤血逻辑
-			}
 		}
-
 	}
 
 }

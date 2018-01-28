@@ -130,8 +130,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
+  dmg: 5
   direction: 1
-  __________________: 0
   originalColors: []
   bounds:
     m_Center: {x: 0, y: 0, z: 0}

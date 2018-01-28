@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 50343550147307140}
   - component: {fileID: 58492670927032524}
   - component: {fileID: 114307206645183590}
+  - component: {fileID: 114402794226560978}
   m_Layer: 8
   m_Name: Player1
   m_TagString: Player
@@ -77,8 +78,29 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.1
+  m_Radius: 0.3327616
 --- !u!114 &114307206645183590
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1561998354725414}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3065e1a35b5734d5ca0e2437c27d5f44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 3
+  playerHealth: 1
+  playerId: 1
+  playerCanMove: 1
+  coinSFX: {fileID: 0}
+  deathSFX: {fileID: 0}
+  jumpSFX: {fileID: 0}
+  victorySFX: {fileID: 0}
+  deathExplosion: {fileID: 1184610256338768, guid: 7200e126c419844babbf3e2657f0f5e8,
+    type: 2}
+--- !u!114 &114402794226560978
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -86,10 +108,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1561998354725414}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3065e1a35b5734d5ca0e2437c27d5f44, type: 3}
+  m_Script: {fileID: 11500000, guid: 458bca26f97524256bd844d0217e0d76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 3
+  facing: 4
   playerHealth: 1
   playerId: 1
   playerCanMove: 1
