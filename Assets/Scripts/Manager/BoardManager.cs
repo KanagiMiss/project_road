@@ -101,12 +101,21 @@ namespace GOAT
 		{
 			//top
 			Instantiate (player1, new Vector3 (Random.Range(1, columns-1), rows-1, 0f), Quaternion.identity);
+			//top
+			/*mg1 = Instantiate (messenger1, new Vector3 (0, rows-1, 0f), Quaternion.identity);
+			mg1.GetComponent<Messenger> ().SetMailingDestination (new Vector3 (Random.Range(1, columns-1), rows-1, 0f));
+			mg1.GetComponent<Messenger> ().SetMailType (1);*/
 		}
 
 		void OnPlayer2Death()
 		{
 			//bottom
 			Instantiate (player2, new Vector3 (Random.Range(1, columns-1), 0, 0f), Quaternion.identity);
+			//
+			//bottom
+			/*mg2 = Instantiate (messenger2, new Vector3 (0, 0, 0f), Quaternion.identity);
+			mg2.GetComponent<Messenger> ().SetMailingDestination (new Vector3 (Random.Range(1, columns-1), 0, 0f));
+			mg2.GetComponent<Messenger> ().SetMailType (2);*/
 		}
 
 		void OnPlayer1ArriveMailbox()

@@ -155,6 +155,7 @@ MonoBehaviour:
   success_to_reach_dest: 0
   flipped: 0
   move_speed: 2
+  envelop_type: 0
 --- !u!212 &212492330015838370
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -186,8 +187,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1437543633
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f37c7a6bcee754db29c2c3b0b551dffa, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

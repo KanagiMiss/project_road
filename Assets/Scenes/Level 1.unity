@@ -284,6 +284,18 @@ Prefab:
       propertyPath: UIExtraLives.Array.data[9]
       value: 
       objectReference: {fileID: 303975292}
+    - target: {fileID: 114512205703441310, guid: a6a27244de3254a2cb4ff9b46cc555df,
+        type: 2}
+      propertyPath: messenger1
+      value: 
+      objectReference: {fileID: 1144374235872490, guid: 0d7949470e929434787845ba34d8fedb,
+        type: 2}
+    - target: {fileID: 114512205703441310, guid: a6a27244de3254a2cb4ff9b46cc555df,
+        type: 2}
+      propertyPath: messenger2
+      value: 
+      objectReference: {fileID: 1144374235872490, guid: 0d7949470e929434787845ba34d8fedb,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a6a27244de3254a2cb4ff9b46cc555df, type: 2}
   m_IsPrefabParent: 0
