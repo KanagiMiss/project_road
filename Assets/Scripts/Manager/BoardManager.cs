@@ -43,6 +43,7 @@ namespace GOAT
 		public GameObject mailbox1, mailbox2;
 		public GameObject messenger1, messenger2;
 
+		private float startTime = 0f;
 		private Transform boardHolder;									//A variable to store a reference to the transform of our Board object.
 		private List <Vector3> gridPositions = new List <Vector3> ();	//A list of possible locations to place tiles.
 		private List <Vector3> gridEnemySpawnPositions = new List <Vector3> ();
@@ -53,6 +54,7 @@ namespace GOAT
 
 		void Awake()
 		{
+			startTime = Time.time;
 			mailbox_x_usage = 2;
 			mailbox_x = Random.Range (1, columns - 1);
 		}
@@ -236,6 +238,14 @@ namespace GOAT
 			}
 		}
 
+		float AdaptiveWaitTime()
+		{
+			if (Time.time - startTime < 40f) {
+				return 6f - 0.1f * (Time.time - startTime);
+			}
+			return 2f;
+		}
+
 		IEnumerator SpawnEnemy(GameObject[] tileArray, int minimum, int maximum)
 		{
 			while (true) {
@@ -256,7 +266,7 @@ namespace GOAT
 					Instantiate(tileChoice, randomPosition, Quaternion.identity);
 				}
 				ResetEnemySpawnPoints ();
-				yield return new WaitForSeconds(2f);
+				yield return new WaitForSeconds(AdaptiveWaitTime());
 			}
 		}
 

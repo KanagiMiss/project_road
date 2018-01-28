@@ -99,6 +99,8 @@ MonoBehaviour:
   victorySFX: {fileID: 0}
   deathExplosion: {fileID: 1184610256338768, guid: 7200e126c419844babbf3e2657f0f5e8,
     type: 2}
+  respawnExplosion: {fileID: 1989223251545900, guid: 5a71649de730c4e2682fae2c0b02d863,
+    type: 2}
 --- !u!212 &212818627198593364
 SpriteRenderer:
   m_ObjectHideFlags: 1
