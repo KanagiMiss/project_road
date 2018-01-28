@@ -8,6 +8,7 @@ namespace GOAT{
 		private Vector3 mailing_destination = Vector3.zero;  //送信的目的地
 		public bool success_to_send_mail = false; //已经成功地将信交到了player的手中
 		public bool success_to_reach_dest = false;  //已经到达了目的地
+		public bool flipped = false;  //邮差已经被翻转过了
 		public float move_speed = 20f;
 		//1.  f+f ：还在去的路上（left_to_right）
 		//2.  f+t ：已经到达了目的地，在等待玩家（idle）
@@ -49,6 +50,12 @@ namespace GOAT{
 			} else {
 				//case 3. right_to_left
 				print("messenger move to left!");
+				if (!flipped) {
+					flipped = true;
+					Vector3 temp_scale = transform.localScale;
+					temp_scale.x *= -1;
+					transform.localScale = temp_scale;
+				}
 				Vector3 temp_pos = transform.position;
 				temp_pos.x -= move_speed * Time.deltaTime;
 				transform.position = temp_pos;
