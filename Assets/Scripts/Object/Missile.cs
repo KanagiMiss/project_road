@@ -24,8 +24,8 @@ namespace GOAT{
 	public class Missile : MonoBehaviour {
 
 		public MissileType missile_type = MissileType.NORMAL;
-		[SerializeField] private float explosion_delay = 2f;  //扔下以后多久爆炸
-		[SerializeField] private float explosion_duration = 5f;  //爆炸持续多久
+		[SerializeField] private float explosion_delay = 1f;  //扔下以后多久爆炸
+		[SerializeField] private float explosion_duration = 0.8f;  //爆炸持续多久
 		public int dmg = 5;
 		//底下的不是用户可以在Inspector面板中选择的。
 		CircleCollider2D explosion_circle;
