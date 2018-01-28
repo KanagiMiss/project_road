@@ -20,19 +20,17 @@ namespace GOAT{
 			titles = new string[2];
 			sentences = new Queue<string>();
 
-//			animator.SetBool("IsMC", true);
-			//Debug.Log (animator.GetBool("IsMC"));
-
-			titles[0] = "司令部";
-			titles[1] = "前线";
+			titles[0] = "Red Army";
+			titles[1] = "Blue Army";
 
 			sentences.Clear();
 
-			sentences.Enqueue ("Hi!");
-			sentences.Enqueue ("Hello!");
-			sentences.Enqueue ("How are you?");
-			sentences.Enqueue ("I am fine, thank you, and you?");
-			sentences.Enqueue ("I am very well!");
+			sentences.Enqueue ("The war is urgent, Please exchange intelligences quickly. Over!");
+			sentences.Enqueue ("We are thinking exactly the same thing, Where shall we meet？ Over!");
+			sentences.Enqueue ("The only place we could meet was the enemy's high-voltage fence.");
+			sentences.Enqueue ("That's so crazy! It's too dangerous.");
+			sentences.Enqueue ("So, we can only count on GOAT(Greatest Of the All Time)...");
+			sentences.Enqueue ("Super Courier Bros!!!");
 		}
 
 		public void Start ()

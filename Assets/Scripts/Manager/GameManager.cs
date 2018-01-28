@@ -183,6 +183,7 @@ namespace GOAT
 			//StartCoroutine (MoveEnemies ());
 			reminingTime -= Time.deltaTime;
 			if (reminingTime <= 0 || lives <= 0) {
+				PlayerPrefManager.SetScore (score);
 				SceneManager.LoadScene("GameLose");
 				return;
 			} else {
