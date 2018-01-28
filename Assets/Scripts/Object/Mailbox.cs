@@ -31,6 +31,9 @@ namespace GOAT{
 					go_player2.transform.DetachChildren ();
 					tf_envelop_1.parent = go_player2.transform;
 					tf_envelop_2.parent = go_player1.transform;
+					//
+					tf_envelop_1.position = new Vector3(go_player2.transform.position.x,go_player2.transform.position.y+0.8f,0);
+					tf_envelop_2.position = new Vector3(go_player1.transform.position.x,go_player1.transform.position.y+0.8f,0);
 				} 
 			}
 		}
