@@ -33,8 +33,11 @@ namespace GOAT{
 			print ("Shine().");
 
 			// 把碰撞体积范围扩大，粒子效果释放
-			transform_size = transform.localScale;
-			transform.localScale = new Vector2(transform.localScale.x, 5);
+			BoxCollider2D bc = this.gameObject.GetComponent<BoxCollider2D>();
+			Vector2 origin_size = bc.size;
+			bc.size = new Vector2 (origin_size.x, origin_size.y * 2.5f);
+			//transform_size = transform.localScale;
+			//transform.localScale = new Vector2(transform.localScale.x, 5);
 			is_shining = true;
 
 			// 持续个2s的效果以后，收回粒子效果，缩小碰撞体积
@@ -45,8 +48,10 @@ namespace GOAT{
 		IEnumerator ResumeShine () {
 			yield return new WaitForSeconds (2);
 			is_shining = false;
-			transform.localScale = transform_size;
-
+			//transform.localScale = transform_size;
+			BoxCollider2D bc = this.gameObject.GetComponent<BoxCollider2D>();
+			Vector2 origin_size = bc.size;
+			bc.size = new Vector2 (origin_size.x, origin_size.y / 2.5f);
 			// 4秒以后调用Shine()，形成循环
 			Invoke ("Shine", 4);
 		}
@@ -66,7 +71,6 @@ namespace GOAT{
 				case "Player":  //碰到了Hero
 					//Hero跪了
 					//other.GetComponent<player>().DoDamage(0);  //Hero伤血逻辑
-					print("YOOO");
 					other.GetComponent<Player>().ApplyDamage(5);
 					break;
 				}
