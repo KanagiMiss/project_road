@@ -30,11 +30,12 @@ namespace GOAT
 
 		// particle
 		public GameObject deathExplosion;
+		public GameObject respawnExplosion;
 
 		// private variables below
 
 		private float speedDecay = 15f;
-		private float pullA = 4f;
+		private float pullA = 3f;
 		private float dragA = 2f;
 
 		// store references to components on the gameObject
@@ -78,6 +79,19 @@ namespace GOAT
 			_playerLayer = this.gameObject.layer;
 
 			_vx = _vy = 0;
+
+			// create respawn particle
+			Instantiate(respawnExplosion, this.transform.position, Quaternion.identity);
+
+			// freeze player for about 0.5 seconds
+			playerCanMove = false;
+			StartCoroutine (WaitAndLetPlayerMove (0.5f));
+		}
+
+		IEnumerator WaitAndLetPlayerMove(float t)
+		{
+			yield return new WaitForSeconds (t);
+			playerCanMove = true;
 		}
 
 		void Start()
@@ -104,19 +118,25 @@ namespace GOAT
 			_vx = _vx + pullA * _ax * Time.deltaTime;
 			_vy = _vy + pullA * _ay * Time.deltaTime;
 
-			_vx = _vx + Mathf.Sign (_vx) * (-1) * dragA * Time.deltaTime;
-			_vy = _vy + Mathf.Sign (_vy) * (-1) * dragA * Time.deltaTime;
+			float _vx_sign = Mathf.Sign (_vx);
+			float _vy_sign = Mathf.Sign (_vy);
 
-			_vx = Mathf.Sign (_vx) * Mathf.Clamp (Mathf.Abs (_vx), 0f, 1f);
-			_vy = Mathf.Sign (_vy) * Mathf.Clamp (Mathf.Abs (_vy), 0f, 0.8f);
-
-			if (Mathf.Abs (_vx) < 0.05f) {
-				_vx = 0f;
+			if (_ax == 0) {
+				_vx = _vx + _vx_sign * (-1) * dragA * Time.deltaTime;
+				if (Mathf.Abs (_vx) < 0.5f) {
+					_vx = 0f;
+				}
 			}
 
-			if (Mathf.Abs (_vy) < 0.05f) {
-				_vy = 0f;
+			if (_ay == 0) {
+				_vy = _vy + _vy_sign * (-1) * dragA * Time.deltaTime;
+				if (Mathf.Abs (_vy) < 0.5f) {
+					_vy = 0f;
+				}
 			}
+
+			_vx = _vx_sign * Mathf.Clamp (Mathf.Abs (_vx), 0f, 1f);
+			_vy = _vy_sign * Mathf.Clamp (Mathf.Abs (_vy), 0f, 0.8f);
 
 			// Determine if running based on the horizontal movement
 			if (_vx != 0 || _vy != 0) 
@@ -232,6 +252,7 @@ namespace GOAT
 		public void ApplyDamage (int damage) {
 			if (playerCanMove) {
 				playerHealth -= damage;
+				EventManager.TriggerEvent ("Damage");
 
 				if (playerHealth <= 0) { // player is now dead, so start dying
 					//PlaySound(deathSFX);

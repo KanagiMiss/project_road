@@ -105,6 +105,7 @@ public class Missile_Cannon : MonoBehaviour {
 		//切换到Missile的爆炸动画
 		this.GetComponent<Animator>().SetBool("reached", true);
 		print ("Explosion!");
+		EventManager.TriggerEvent ("Boom");
 		//把collider打开
 		explosion_circle.enabled = true;   
 		StartCoroutine (DestroyMissile());
@@ -125,7 +126,6 @@ public class Missile_Cannon : MonoBehaviour {
 		case "Player":  //碰到了Hero
 			//Hero跪了
 			//other.GetComponent<player>().DoDamage(0);  //Hero伤血逻辑
-			print("YOOO");
 			other.GetComponent<Player>().ApplyDamage(dmg);
 			break;
 		}

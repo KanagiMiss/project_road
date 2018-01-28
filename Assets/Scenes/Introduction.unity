@@ -217,7 +217,7 @@ Prefab:
     - target: {fileID: 114818403259721334, guid: 5195d0fb9aa8c4d1eb82787734d66210,
         type: 2}
       propertyPath: m_Text
-      value: "\u6218\u573A\u524D\u7EBF"
+      value: Battle Front
       objectReference: {fileID: 0}
     - target: {fileID: 224096905719574442, guid: 5195d0fb9aa8c4d1eb82787734d66210,
         type: 2}

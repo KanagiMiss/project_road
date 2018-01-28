@@ -43,6 +43,7 @@ namespace GOAT
 		public GameObject mailbox1, mailbox2;
 		public GameObject messenger1, messenger2;
 
+		private float startTime = 0f;
 		private Transform boardHolder;									//A variable to store a reference to the transform of our Board object.
 		private List <Vector3> gridPositions = new List <Vector3> ();	//A list of possible locations to place tiles.
 		private List <Vector3> gridEnemySpawnPositions = new List <Vector3> ();
@@ -53,6 +54,7 @@ namespace GOAT
 
 		void Awake()
 		{
+			startTime = Time.time;
 			mailbox_x_usage = 2;
 			mailbox_x = Random.Range (1, columns - 1);
 		}
@@ -99,12 +101,21 @@ namespace GOAT
 		{
 			//top
 			Instantiate (player1, new Vector3 (Random.Range(1, columns-1), rows-1, 0f), Quaternion.identity);
+			//top
+			/*mg1 = Instantiate (messenger1, new Vector3 (0, rows-1, 0f), Quaternion.identity);
+			mg1.GetComponent<Messenger> ().SetMailingDestination (new Vector3 (Random.Range(1, columns-1), rows-1, 0f));
+			mg1.GetComponent<Messenger> ().SetMailType (1);*/
 		}
 
 		void OnPlayer2Death()
 		{
 			//bottom
 			Instantiate (player2, new Vector3 (Random.Range(1, columns-1), 0, 0f), Quaternion.identity);
+			//
+			//bottom
+			/*mg2 = Instantiate (messenger2, new Vector3 (0, 0, 0f), Quaternion.identity);
+			mg2.GetComponent<Messenger> ().SetMailingDestination (new Vector3 (Random.Range(1, columns-1), 0, 0f));
+			mg2.GetComponent<Messenger> ().SetMailType (2);*/
 		}
 
 		void OnPlayer1ArriveMailbox()
@@ -113,6 +124,7 @@ namespace GOAT
 			//top
 			mg1 = Instantiate (messenger1, new Vector3 (0, rows-1, 0f), Quaternion.identity);
 			mg1.GetComponent<Messenger> ().SetMailingDestination (new Vector3 (Random.Range(1, columns-1), rows-1, 0f));
+			mg1.GetComponent<Messenger> ().SetMailType (1);
 		}
 
 		void OnPlayer2ArriveMailbox()
@@ -121,6 +133,7 @@ namespace GOAT
 			//bottom
 			mg2 = Instantiate (messenger2, new Vector3 (0, 0, 0f), Quaternion.identity);
 			mg2.GetComponent<Messenger> ().SetMailingDestination (new Vector3 (Random.Range(1, columns-1), 0, 0f));
+			mg2.GetComponent<Messenger> ().SetMailType (2);
 		}
 
 		void OnPlayer1ArriveMessenger()
@@ -238,6 +251,14 @@ namespace GOAT
 			}
 		}
 
+		float AdaptiveWaitTime()
+		{
+			if (Time.time - startTime < 40f) {
+				return 6f - 0.1f * (Time.time - startTime);
+			}
+			return 2f;
+		}
+
 		IEnumerator SpawnEnemy(GameObject[] tileArray, int minimum, int maximum)
 		{
 			while (true) {
@@ -258,7 +279,7 @@ namespace GOAT
 					Instantiate(tileChoice, randomPosition, Quaternion.identity);
 				}
 				ResetEnemySpawnPoints ();
-				yield return new WaitForSeconds(2f);
+				yield return new WaitForSeconds(AdaptiveWaitTime());
 			}
 		}
 
@@ -324,10 +345,11 @@ namespace GOAT
 			//top
 			mg1 = Instantiate (messenger1, new Vector3 (0, rows-1, 0f), Quaternion.identity);
 			mg1.GetComponent<Messenger> ().SetMailingDestination (new Vector3 (Random.Range(1, columns-1), rows-1, 0f));
-
+			mg1.GetComponent<Messenger> ().SetMailType (1);
 			//bottom
 			mg2 = Instantiate (messenger2, new Vector3 (0, 0, 0f), Quaternion.identity);
 			mg2.GetComponent<Messenger> ().SetMailingDestination (new Vector3 (Random.Range(1, columns-1), 0, 0f));
+			mg2.GetComponent<Messenger> ().SetMailType (2);
 		}
 
 		//SetupScene initializes our level and calls the previous functions to lay out the game board

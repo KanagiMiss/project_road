@@ -58,6 +58,7 @@ namespace GOAT{
 		//爆炸函数
 		void Explosion(){
 			print ("Explosion!");
+			EventManager.TriggerEvent ("Boom");
 			this.GetComponent<Animator> ().SetBool ("need_explosion", true);
 			//把collider打开
 			explosion_circle.enabled = true;   
