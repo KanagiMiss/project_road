@@ -91,7 +91,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   success_to_send_mail: 0
   success_to_reach_dest: 0
-  move_speed: 10
+  flipped: 0
+  move_speed: 30
 --- !u!212 &212473891036060834
 SpriteRenderer:
   m_ObjectHideFlags: 1

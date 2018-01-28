@@ -41,7 +41,7 @@ namespace GOAT{
 						print ("messenger reach the destination.");
 						//已经到了idle状态
 						success_to_reach_dest = true;
-						//this.gameObject.GetComponent<Animator> ().SetBool ();
+						this.GetComponent<Animator>().SetBool("running", false);
 					}
 				} else {
 					//case 2. idle
@@ -52,6 +52,7 @@ namespace GOAT{
 				print("messenger move to left!");
 				if (!flipped) {
 					flipped = true;
+					this.GetComponent<Animator>().SetBool("running", true);
 					Vector3 temp_scale = transform.localScale;
 					temp_scale.x *= -1;
 					transform.localScale = temp_scale;
@@ -72,6 +73,7 @@ namespace GOAT{
 			if (coll.gameObject.tag == "Player") {
 				if (success_to_send_mail == true)
 					return;
+				//设置messenger的animator
 				success_to_send_mail = true;
 				print ("the player has touched the messenger.");
 				if(coll.gameObject.GetComponent<Player>().playerId == 1){
