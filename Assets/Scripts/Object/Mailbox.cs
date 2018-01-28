@@ -7,6 +7,7 @@ namespace GOAT{
 	public class Mailbox : MonoBehaviour {
 
 		private static bool player1Arrived = false, player2Arrived = false;
+		private static GameObject go_player1, go_player2;
 
 		// Use this for initialization
 		void Start () {
@@ -20,15 +21,28 @@ namespace GOAT{
 				EventManager.TriggerEvent ("Player2ArriveMailbox");
 				player1Arrived = false;
 				player2Arrived = false;
+
+				//此时交换player1和player2头上的信件
+				if (go_player1 != null && go_player2 != null) {
+					print("Exchange the envelops!");
+					Transform tf_envelop_1 = go_player1.transform.GetChild (0);
+					Transform tf_envelop_2 = go_player2.transform.GetChild (0);
+					go_player1.transform.DetachChildren ();
+					go_player2.transform.DetachChildren ();
+					tf_envelop_1.parent = go_player2.transform;
+					tf_envelop_2.parent = go_player1.transform;
+				} 
 			}
 		}
 
 		void OnTriggerEnter2D(Collider2D coll){
 			if (coll.gameObject.tag == "Player") {
 				if(coll.gameObject.GetComponent<Player>().playerId == 1){
+					go_player1 = coll.gameObject;
 					player1Arrived = true;
 				}
 				else if(coll.gameObject.GetComponent<Player>().playerId == 2){
+					go_player2 = coll.gameObject;
 					player2Arrived = true;
 				}
 			}
