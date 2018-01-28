@@ -12,7 +12,7 @@ namespace GOAT{
 
 		// Use this for initialization
 		void Start () {
-			InvokeRepeating ("ThrowMissile", 0f, throwRate);
+			InvokeRepeating ("ThrowMissile", 0f, 1.0f/throwRate);
 		}
 
 		void Update() {

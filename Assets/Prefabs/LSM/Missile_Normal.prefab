@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 114865824317179936}
   - component: {fileID: 50491901623136008}
   - component: {fileID: 95236651091614008}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: Missile_Normal
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -63,7 +63,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!58 &58018477824814170
 CircleCollider2D:
   m_ObjectHideFlags: 1
@@ -73,12 +73,12 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.30189052
+  m_Radius: 0.5346295
 --- !u!95 &95236651091614008
 Animator:
   serializedVersion: 3
@@ -108,10 +108,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   missile_type: 1
-  rest_distance: 0
   explosion_delay: 1
   explosion_duration: 1
-  fly_speed: 1
+  dmg: 5
 --- !u!212 &212009969458483056
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -143,8 +142,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 2051416071
-  m_SortingLayer: 2
+  m_SortingLayerID: 1799952009
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: ec2f8f7c8b73317409f9b2e46e7e09e8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

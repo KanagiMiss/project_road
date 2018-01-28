@@ -3,25 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 
 namespace GOAT{
-
-	public class Enemy_soldier : Enemy {
+	//我方送信的NPC
+	public class Spyder : MonoBehaviour {
 
 		// Use this for initialization
 		void Start () {
 			
 		}
-		
+
+
 		// Update is called once per frame
 		void Update () {
-			Move ();
-		}
-
-
-
-		//
-		public override void Move(){
 			
 		}
+
 	}
 
 }

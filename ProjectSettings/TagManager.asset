@@ -59,3 +59,6 @@ TagManager:
   - name: Messager
     uniqueID: 2527228517
     locked: 0
+  - name: Frontground
+    uniqueID: 1437543633
+    locked: 0

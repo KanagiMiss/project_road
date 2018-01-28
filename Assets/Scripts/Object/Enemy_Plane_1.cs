@@ -8,6 +8,9 @@ namespace GOAT{
 	public class Enemy_Plane_1 : Enemy {
 		public GameObject prefabMissile;
 		public float throwRate = 0.5f;  //飞机扔炸弹的频率
+		//随机选取一小段值，每次扔了炸弹以后，就立刻计算下一次投弹的位置
+		public float throwDistance = 8;
+		private float rest_distance = 0;
 
 
 		// Use this for initialization
@@ -18,11 +21,17 @@ namespace GOAT{
 				old_scale.x = -1;
 				this.transform.localScale = old_scale;
 			}
-			InvokeRepeating ("ThrowMissile", 0f, throwRate);
+			//InvokeRepeating ("ThrowMissile", 0f, 1.0f/throwRate);
 		}
 
 		void Update() {
 			Move ();
+			if (rest_distance <= 0) {
+				ThrowMissile ();
+				//此时需要随机选取一个0~throwDistance的值作为新的rest_distance
+				rest_distance = Random.Range (throwDistance/2.0f, throwDistance) ;
+			}
+			rest_distance -= Time.deltaTime * this.speed;
 		}
 
 
@@ -44,6 +53,9 @@ namespace GOAT{
 			transform.position = tempPos;
 			base.Move ();
 		}
+
+
+
 
 		//投弹
 		public void ThrowMissile() {

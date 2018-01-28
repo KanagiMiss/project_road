@@ -12,6 +12,7 @@ public class Missile_Cannon : MonoBehaviour {
 	private MissileDirection fly_direction = MissileDirection.DOWN;  //炮弹默认的飞行方向
 	private bool reached = false;  //炮弹已经到达爆炸点
 	private bool explosed = false;
+	private int dmg = 5;
 
 	[SerializeField] private float explosion_delay = 1f;  //扔下以后多久爆炸
 	[SerializeField] private float explosion_duration = 1f;  //爆炸持续多久
@@ -118,24 +119,15 @@ public class Missile_Cannon : MonoBehaviour {
 
 
 	//爆炸了！
-	/*void OnCollisionEnter2D(Collision2D coll){
-		print ("Missile : OnCollisionEnter2D().");
+	void OnCollisionEnter2D(Collision2D coll){
 		GameObject other = coll.gameObject;
 		switch (other.tag) {
-		case "Hero":  //碰到了Hero
-			other.GetComponent<player>().DoDamage(0);  //Hero伤血逻辑
-			break;
-		}
-	}*/
-
-
-	//Hero被爆到了
-	void OnTriggerEnter2D(Collider2D other) {
-		print ("Missile : OnTriggerEnter2D().");
-		GameObject go = other.gameObject;
-		if (go != null && go.tag == "Hero") {
-			//如果碰撞到的是玩家，那么干吧
+		case "Player":  //碰到了Hero
+			//Hero跪了
 			//other.GetComponent<player>().DoDamage(0);  //Hero伤血逻辑
+			print("YOOO");
+			other.GetComponent<Player>().ApplyDamage(dmg);
+			break;
 		}
 	}
 

@@ -151,8 +151,10 @@ namespace GOAT
 				int random_num = Random.Range (0, 100);
 				if (random_num > 50) {
 					x = 0;
+					//x = -1;
 				} else if (random_num < 50) {
 					x = columns - 1;
+					//x = columns;
 				}
 				if (y != rows / 2) {
 					gridEnemySpawnPositions.Add (new Vector3 (x, y, 0f));

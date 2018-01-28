@@ -15,8 +15,6 @@ namespace GOAT{
 		public float speed = 3f;  //运动速度，m/s
 		public int dmg = 5;
 		public EnemyDirection direction = EnemyDirection.LEFT_TO_RIGHT;  //坦克从左到右移动？
-		public bool __________________;
-
 
 		public Color[] originalColors;
 		public Bounds bounds;  //本对象及其子对象的边界框
