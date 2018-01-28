@@ -111,19 +111,21 @@ namespace GOAT
 		{
 			Destroy (mb1);
 			//top
-			mg1 = Instantiate (messenger1, new Vector3 (Random.Range(1, columns-1), rows-1, 0f), Quaternion.identity);
+			mg1 = Instantiate (messenger1, new Vector3 (0, rows-1, 0f), Quaternion.identity);
+			mg1.GetComponent<Messenger> ().SetMailingDestination (new Vector3 (Random.Range(1, columns-1), rows-1, 0f));
 		}
 
 		void OnPlayer2ArriveMailbox()
 		{
 			Destroy (mb2);
 			//bottom
-			mg2 = Instantiate (messenger2, new Vector3 (Random.Range(1, columns-1), 0, 0f), Quaternion.identity);
+			mg2 = Instantiate (messenger2, new Vector3 (0, 0, 0f), Quaternion.identity);
+			mg2.GetComponent<Messenger> ().SetMailingDestination (new Vector3 (Random.Range(1, columns-1), 0, 0f));
 		}
 
 		void OnPlayer1ArriveMessenger()
 		{
-			Destroy (mg1);
+			//Destroy (mg1);
 			if(mailbox_x_usage <= 0){
 				mailbox_x_usage = 2;
 				mailbox_x = Random.Range (1, columns - 1);
@@ -134,7 +136,7 @@ namespace GOAT
 
 		void OnPlayer2ArriveMessenger()
 		{
-			Destroy (mg2);
+			//Destroy (mg2);
 			if(mailbox_x_usage <= 0){
 				mailbox_x_usage = 2;
 				mailbox_x = Random.Range (1, columns - 1);
@@ -315,12 +317,17 @@ namespace GOAT
 			mb2 = Instantiate (mailbox2, new Vector3 (x, (rows/2)-0.5f, 0f), Quaternion.identity);
 		}
 
+
+		//邮差的生成函数
 		void LayoutMessenger()
 		{
 			//top
-			mg1 = Instantiate (messenger1, new Vector3 (Random.Range(1, columns-1), rows-1, 0f), Quaternion.identity);
+			mg1 = Instantiate (messenger1, new Vector3 (0, rows-1, 0f), Quaternion.identity);
+			mg1.GetComponent<Messenger> ().SetMailingDestination (new Vector3 (Random.Range(1, columns-1), rows-1, 0f));
+
 			//bottom
-			mg2 = Instantiate (messenger2, new Vector3 (Random.Range(1, columns-1), 0, 0f), Quaternion.identity);
+			mg2 = Instantiate (messenger2, new Vector3 (0, 0, 0f), Quaternion.identity);
+			mg2.GetComponent<Messenger> ().SetMailingDestination (new Vector3 (Random.Range(1, columns-1), 0, 0f));
 		}
 
 		//SetupScene initializes our level and calls the previous functions to lay out the game board
