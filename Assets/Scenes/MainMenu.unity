@@ -198,7 +198,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Level 1
+          m_StringArgument: Introduction
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
@@ -793,8 +793,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 511.63635, y: -52.363636}
-  m_SizeDelta: {x: 1023.2727, y: 104.72727}
+  m_AnchoredPosition: {x: 682.4644, y: -54.597153}
+  m_SizeDelta: {x: 1364.9288, y: 109.194305}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &711367210
 MonoBehaviour:
@@ -828,11 +828,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Instructions:
-
-    Collect coins, avoid enemies, and go for the Rose!
-
-'
+  m_Text: "Instructions:\nDodge vehicles, shells, cross the FireWire, exchange letters\uFF01\n"
 --- !u!222 &711367211
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -968,8 +964,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 511.63635, y: -174.54546}
-  m_SizeDelta: {x: 1023.2727, y: 139.63637}
+  m_AnchoredPosition: {x: 682.4644, y: -181.99051}
+  m_SizeDelta: {x: 1364.9288, y: 145.5924}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &810693804
 MonoBehaviour:
@@ -1005,9 +1001,9 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: 'Controls:
 
-    Keyboard = WASD or arrow keys to navigate and SPACE to jump
+    Player1 use WASD;
 
-    XBox360 Controller = Left-analog to navigate and A button to jump
+    Player2 use Direction Arrow.
 
 '
 --- !u!222 &810693805
@@ -1122,8 +1118,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 511.63635, y: -296.7273}
-  m_SizeDelta: {x: 1023.2727, y: 104.72727}
+  m_AnchoredPosition: {x: 682.4644, y: -309.38385}
+  m_SizeDelta: {x: 1364.9288, y: 109.194305}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1114769438
 MonoBehaviour:
@@ -1159,7 +1155,7 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: 'Created by:
 
-    Brian Winn and Greg Kozma
+    Liu Shenming, Meng Zhouyu, Ge Gaojian, Wu Hao
 
 '
 --- !u!222 &1114769439
@@ -2208,8 +2204,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 511.63635, y: -384}
-  m_SizeDelta: {x: 1023.2727, y: 34.909092}
+  m_AnchoredPosition: {x: 682.4644, y: -400.37912}
+  m_SizeDelta: {x: 1364.9288, y: 36.3981}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &2069918830
 MonoBehaviour:
@@ -2243,7 +2239,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\xA9 2016 Michigan State University"
+  m_Text: "\xA9 2018 GOAT"
 --- !u!222 &2069918831
 CanvasRenderer:
   m_ObjectHideFlags: 0
